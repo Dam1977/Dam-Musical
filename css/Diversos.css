@@ -1,0 +1,58 @@
+body {
+	height: 100%;
+	margin: auto;
+	width: 95%;
+	max-width: 1000px;
+	background: url(img/Guitars.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	color: white;
+	font-family: "Noto Sans", sans-ser;
+	line-height: 2.5;
+}
+
+img {
+	height: 100px;
+	width: 100px;
+	margin-top: 20px;
+}
+
+main {
+	background: #0000006b;
+	padding: 5px 40px;
+	margin-top: 20px;
+	border-radius: 20px;
+	position: relative;
+}
+
+.logo,
+.titulo,
+.Perfeicao,
+.texto,
+.videos {
+	text-align: center;
+	margin: 0%;
+}
+.container {
+	position: relative;
+	align-items: baseline;
+}
+.abaixo {
+	text-align: left;
+	height: 13px;
+	font-size: 15px;
+	float: center;
+}
+.ul {
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+}
+
+.ul p {
+	font-size: 14px;
+	text-align: center;
+	height: 14px;
+}
