@@ -1,0 +1,117 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.imagem-fundo {
+	background: url(../img/Guitars.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	height: 100vh;
+}
+
+.footer.footer {
+	height: 100%;
+	background: #000;
+	position: relative;
+}
+.fale-conosco a {
+	text-decoration: none;
+}
+.contato {
+	margin-left: 45px;
+}
+.footer.footer .container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+.footer.footer .container > div {
+	flex-grow: 1;
+	flex-basis: 0;
+	padding: 3rem 0.9rem;
+}
+.footer h2 {
+	color: #fff;
+}
+.footer p {
+	font-size: 15px;
+	color: bisque;
+}
+.fotter .sobre-nos {
+	margin-left: 30px;
+}
+.rede-socias {
+	color: #fff;
+	align-items: center;
+}
+.rede-sociais .fa-facebook-f {
+	height: 0px;
+	width: 17px;
+	font-size: 20px;
+	line-height: 40px;
+	margin: 0px 2px 0;
+	color: #87ceeb;
+	cursor: pointer;
+	transition: 0.5s;
+}
+.rede-sociais .fa-facebook-f:hover {
+	color: #fff;
+	transform: translateY(-9px);
+}
+.rede-sociais .fa-twitter {
+	height: 0px;
+	width: 17px;
+	font-size: 20px;
+	line-height: 40px;
+	margin: 0px 2px 0;
+	color: #87ceeb;
+	cursor: pointer;
+	transition: 0.5s;
+}
+.rede-sociais .fa-twitter:hover {
+	color: #fff;
+	transform: translateY(-9px);
+}
+.rede-sociais .fa-instagram {
+	height: 0px;
+	width: 17px;
+	font-size: 20px;
+	line-height: 40px;
+	margin: 0px 2px 0;
+	color: #87ceeb;
+	cursor: pointer;
+	transition: 0.5s;
+}
+.rede-sociais .fa-instagram:hover {
+	color: #fff;
+	transform: translateY(-9px);
+}
+.rede-sociais .fa-whatsapp {
+	height: 0px;
+	width: 17px;
+	font-size: 20px;
+	line-height: 40px;
+	margin: 0px 2px 0;
+	color: #87ceeb;
+	cursor: pointer;
+	transition: 0.5s;
+}
+.rede-sociais .fa-whatsapp:hover {
+	color: #fff;
+	transform: translateY(-9px);
+}
+
+.texto-copy {
+	color: bisque;
+	margin-top: 20%;
+}
+
+.sobre-nos {
+	background: url(../img/eu.PNG);
+	background-repeat: no-repeat;
+	height: 165%;
+	width: 180%;
+	object-fit: cover;
+	margin-bottom: 35px;
+}
