@@ -70,6 +70,7 @@ p {
 
 .bg {
 	background-image: url(../img/Guitars.jpg);
+	margin: auto;
 }
 
 .body {
