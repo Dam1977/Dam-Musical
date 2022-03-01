@@ -71,6 +71,7 @@ p {
 .bg {
 	background-image: url(../img/Guitars.jpg);
 	margin: auto;
+	
 }
 
 ul {
@@ -263,3 +264,4 @@ ul {
 	margin: 0;
 	border-radius: 30px;
 }
+
