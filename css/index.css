@@ -33,6 +33,7 @@ main {
 .videos {
 	text-align: center;
 	margin: 0%;
+	width: 100%;
 }
 
 .banner {
@@ -41,6 +42,7 @@ main {
 	background: url(../img/Guitars.jpg);
 	background-size: 50%;
 	background-position-x: center;
+	width: 100%;
 }
 
 .subtitulo {
@@ -53,6 +55,12 @@ main {
 html {
 	height: 100%;
 	margin: 0px;
+	width: 100%;
+}
+
+h1 {
+	font-size: left;
+	width: 100%;
 }
 
 h3 {
@@ -61,17 +69,19 @@ h3 {
 	font-weight: bold;
 	font-style: normal;
 	text-align: justify;
+	width: 100%;
 }
 
 p {
 	color: white;
 	text-align: justify;
+	width: 100%;
 }
 
 .bg {
 	background-image: url(../img/Guitars.jpg);
 	margin: auto;
-	
+	width: 100%;
 }
 
 ul {
@@ -79,6 +89,7 @@ ul {
 	display: flex;
 	justify-content: space-between;
 	margin-top: 20px;
+	width: 100%;
 }
 
 .body {
@@ -95,16 +106,19 @@ ul {
 }
 
 .Partituras img {
-	height: 180px;
-	width: 200px;
+	height: 100px;
+	align-items: auto;
+	width: 150px;
 	margin-top: 0px;
 	padding: 15px;
 	border-radius: 20px;
+	width: 100%;
 }
 .Partituras {
-	text-align: center;
+	text-align: left;
 	border-radius: 10px;
 	margin-top: 50px;
+	text-decoration: none;
 }
 
 .Partituras p:hover {
@@ -117,38 +131,45 @@ ul {
 
 .Diversos p:hover {
 	color: #87ceeb;
+	width: 100%;
 }
 
 .Apostila img {
-	height: 180px;
-	width: 200px;
+	height: 100px;
+	width: 150px;
 	margin-top: 0px;
 	padding: 15px;
 	border-radius: 20px;
+	width: 100%;
 }
 
 .Apostila {
 	text-align: left;
 	border-radius: 10px;
 	margin-top: 50px;
+	width: 100%;
 }
 
 .Diversos img {
-	height: 180px;
-	width: 200px;
+	height: 100px;
+	width: 150px;
 	margin-top: 0px;
 	padding: 15px;
+	align-items: 0px;
 	border-radius: 20px;
+	width: 100%;
 }
 .Diversos {
 	text-align: left;
 	border-radius: 10px;
 	color: blue;
 	margin-top: 50px;
+	width: 100%;
 }
 .subtitulo {
 	text-align: right;
 	margin-top: 0px;
+	width: 100%;
 }
 .footer.footer {
 	height: 45%;
@@ -256,7 +277,7 @@ ul {
 .sobre-nos {
 	background: url(../img/eu.PNG);
 	background-repeat: no-repeat;
-	height: 80%;
+	height: 58%;
 	width: 200%;
 	object-fit: cover;
 	margin-bottom: 0px;
@@ -264,4 +285,3 @@ ul {
 	margin: 0;
 	border-radius: 30px;
 }
-
