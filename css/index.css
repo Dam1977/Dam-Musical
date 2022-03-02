@@ -11,6 +11,7 @@ body {
 	color: white;
 	font-family: "Noto Sans", sans-ser;
 	line-height: 2.5;
+	width: 100%;
 }
 
 img {
@@ -24,6 +25,8 @@ main {
 	padding: 5px 40px;
 	margin-top: 20px;
 	border-radius: 20px;
+	text-align: center;
+	font-size: 12px;
 }
 
 .logo,
@@ -107,7 +110,6 @@ ul {
 
 .Partituras img {
 	height: 100px;
-	align-items: auto;
 	width: 150px;
 	margin-top: 0px;
 	padding: 15px;
@@ -185,18 +187,23 @@ ul {
 }
 .fale-conosco a {
 	text-decoration: none;
+	width: 100%;
 }
 .contato {
 	margin-left: 45px;
+	width: 100%;
+text-align: left;
 }
 .footer.footer .container {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
+	width: 100%;
 }
 .footer.footer .container > div {
 	flex-grow: 1;
 	flex-basis: 0;
 	padding: 3rem 0.9rem;
+	width: 100%;
 }
 .footer h2 {
 	color: #fff;
@@ -204,13 +211,15 @@ ul {
 .footer p {
 	font-size: 15px;
 	color: #87ceeb;
+	width: 100%;
 }
 .fotter .sobre-nos {
 	margin-left: 30px;
 }
 .rede-socias {
 	color: #fff;
-	align-items: center;
+	align-items: left;
+	width: 100%;
 }
 .rede-sociais .fa-facebook-f {
 	height: 0px;
@@ -253,6 +262,7 @@ ul {
 .rede-sociais .fa-instagram:hover {
 	color: #fff;
 	transform: translateY(-9px);
+	width: 100%;
 }
 .rede-sociais .fa-whatsapp {
 	height: 0px;
@@ -274,14 +284,3 @@ ul {
 	margin-top: 1%;
 }
 
-.sobre-nos {
-	background: url(../img/eu.PNG);
-	background-repeat: no-repeat;
-	height: 58%;
-	width: 200%;
-	object-fit: cover;
-	margin-bottom: 0px;
-	margin-top: 18px;
-	margin: 0;
-	border-radius: 30px;
-}
