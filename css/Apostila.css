@@ -1,27 +1,18 @@
+body {
+  background-image: url(../img/Guitars.jpg);
+	
+}
+ 
+.logo {
+	margin-top: 0%;
+	margin-bottom: 0%;
+}
 
+.titulo {
+  font-family: sans;
+	margin-top: auto;
+}
 
-body{
-    background-color: rgb(0, 0, 0);
-    }
-
-  h1{
-   font: bold;
-   font-style: normal;
-   text-align: center;
-   color: white;
-
-  }
-  p{
-  text-align: center;
-  color: white;
-  }
-  
-  .logo{
-    margin-top: 0%;
-    margin-bottom: 0%;
-      
-  }
-  
-  .titulo{
-    margin-top: auto;
-  }
+.voltar{
+  margin-top: -275px;
+}
