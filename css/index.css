@@ -246,7 +246,6 @@ ul {
 .rede-sociais .fa-instagram:hover {
 	color: #fff;
 	transform: translateY(-9px);
-	width: 100%;
 }
 .rede-sociais .fa-whatsapp {
 	height: 0px;
@@ -266,4 +265,5 @@ ul {
 .texto-copy {
 	color: #fff;
 	margin-top: 1%;
+	text-align: center;
 }
