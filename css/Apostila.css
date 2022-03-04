@@ -1,18 +1,18 @@
 body {
-  background-image: url(../img/Guitars.jpg);
-	
+	background-image: url(../img/Guitars.jpg);
 }
- 
+
 .logo {
 	margin-top: 0%;
 	margin-bottom: 0%;
 }
 
 .titulo {
-  font-family: sans;
+	font-family: sans;
 	margin-top: auto;
 }
 
-.voltar{
-  margin-top: -275px;
+.voltar {
+	margin-top: -275px;
+	font-size: 12px;
 }
