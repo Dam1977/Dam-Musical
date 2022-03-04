@@ -11,7 +11,6 @@ body {
 	color: white;
 	font-family: "Noto Sans", sans-ser;
 	line-height: 2.5;
-	width: 100%;
 }
 
 img {
@@ -36,7 +35,6 @@ main {
 .videos {
 	text-align: center;
 	margin: 0%;
-	width: 100%;
 }
 
 .banner {
@@ -45,7 +43,6 @@ main {
 	background: url(../img/Guitars.jpg);
 	background-size: 50%;
 	background-position-x: center;
-	width: 100%;
 }
 
 .subtitulo {
@@ -58,12 +55,10 @@ main {
 html {
 	height: 100%;
 	margin: 0px;
-	width: 100%;
 }
 
 h1 {
 	font-size: left;
-	width: 100%;
 }
 
 h3 {
@@ -72,19 +67,16 @@ h3 {
 	font-weight: bold;
 	font-style: normal;
 	text-align: justify;
-	width: 100%;
 }
 
 p {
 	color: white;
 	text-align: justify;
-	width: 100%;
 }
 
 .bg {
 	background-image: url(../img/Guitars.jpg);
 	margin: auto;
-	width: 100%;
 }
 
 ul {
@@ -92,7 +84,6 @@ ul {
 	display: flex;
 	justify-content: space-between;
 	margin-top: 20px;
-	width: 100%;
 }
 
 .body {
@@ -109,12 +100,11 @@ ul {
 }
 
 .Partituras img {
-	height: 100px;
-	width: 150px;
+	height: 180px;
+	width: 250px;
 	margin-top: 0px;
 	padding: 15px;
 	border-radius: 20px;
-	width: 100%;
 }
 .Partituras {
 	text-align: left;
@@ -133,45 +123,39 @@ ul {
 
 .Diversos p:hover {
 	color: #87ceeb;
-	width: 100%;
 }
 
 .Apostila img {
-	height: 100px;
-	width: 150px;
+	height: 180px;
+	width: 250px;
 	margin-top: 0px;
 	padding: 15px;
 	border-radius: 20px;
-	width: 100%;
 }
 
 .Apostila {
 	text-align: left;
 	border-radius: 10px;
 	margin-top: 50px;
-	width: 100%;
 }
 
 .Diversos img {
-	height: 100px;
-	width: 150px;
+	height: 180px;
+	width: 250px;
 	margin-top: 0px;
 	padding: 15px;
 	align-items: 0px;
 	border-radius: 20px;
-	width: 100%;
 }
 .Diversos {
 	text-align: left;
 	border-radius: 10px;
 	color: blue;
 	margin-top: 50px;
-	width: 100%;
 }
 .subtitulo {
 	text-align: right;
 	margin-top: 0px;
-	width: 100%;
 }
 .footer.footer {
 	height: 45%;
@@ -192,7 +176,7 @@ ul {
 .contato {
 	margin-left: 45px;
 	width: 100%;
-text-align: left;
+	text-align: left;
 }
 .footer.footer .container {
 	display: grid;
@@ -283,4 +267,3 @@ text-align: left;
 	color: #fff;
 	margin-top: 1%;
 }
-
