@@ -1,6 +1,107 @@
 body {
 	background-image: url(../img/Guitars.jpg);
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
 }
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+.container {
+	width: 100%;
+	float: left;
+	padding: 3% 4%;
+	text-align: center;
+}
+.bgGradient {
+	background: linear-gradient(to right, black, royalblue);
+}
+.bgGradient2 {
+	background: linear-gradient(to right, royalblue, black);
+}
+
+.socialIcons {
+	width: 100%;
+}
+.socialIcons i {
+	font-size: 1.5em;
+	color: #fff;
+	margin-right: 3%;
+	opacity: 0.7;
+	transition: 0.5s;
+}
+.socialIcons .fa-facebook-f:hover {
+	color: #87ceeb;
+	transform: translateY(-9px);
+}
+
+.socialIcons .fa-facebook-f:hover {
+	color: #87ceeb;
+	transform: translateY(-9px);
+}
+
+.socialIcons .fa-twitter:hover {
+	color: #87ceeb;
+	transform: translateY(-9px);
+}
+
+.socialIcons .fa-twitter-f:hover {
+	color: #87ceeb;
+	transform: translateY(-9px);
+}
+
+.socialIcons .fa-instagram:hover {
+	color: #87ceeb;
+	transform: translateY(-9px);
+}
+
+.socialIcons .fa-whatsapp:hover {
+	color: #87ceeb;
+	transform: translateY(-9px);
+}
+
+.socialIcons .fa-whatsapp:hover {
+	color: #87ceeb;
+	transform: translateY(-9px);
+}
+.direitos {
+	margin-top: 10px;
+	color: #fff;
+	opacity: 0.7;
+}
+.rodape {
+	max-width: 1536px;
+}
+
+.col-sm-4 h5 a {
+	color: #fff;
+	font-weight: bold;
+}
+
+.col-sm-4 p {
+	color: #87ceeb;
+	text-align: center;
+}
+.col-sm-4 img {
+	height: 210px;
+	width: 280px;
+	margin-top: 0px;
+	padding: 15px;
+	border-radius: 20px;
+}
+
 
 .logo {
 	margin-top: 0%;
@@ -12,7 +113,7 @@ body {
 	margin-top: auto;
 }
 
-.voltar {
-	margin-top: -275px;
-	font-size: 12px;
+.voltar img {
+	width: auto;
+	height: auto;
 }
