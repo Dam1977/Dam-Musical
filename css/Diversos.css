@@ -26,6 +26,7 @@ video {
 	padding: 3% 4%;
 	text-align: center;
 }
+
 .bgGradient {
 	background: linear-gradient(to right, black, royalblue);
 }
@@ -103,10 +104,6 @@ video {
 	border-radius: 20px;
 }
 
-
-
-
-
 .container {
 	width: 100%;
 	float: left;
@@ -136,4 +133,6 @@ video {
 	font-size: 14px;
 	text-align: center;
 	height: 14px;
+	color: #fff;
+	margin-top: 10px;
 }
