@@ -18,9 +18,6 @@ ul {
 img {
 	max-width: 100%;
 }
-h3 {
-	color: white;
-}
 
 .container {
 	width: 100%;
@@ -34,60 +31,10 @@ h3 {
 .bgGradient2 {
 	background: linear-gradient(to right, royalblue, black);
 }
-
-.socialIcons {
-	width: 100%;
+h4 {
+	color: white;
+	font-size: 20px;
 }
-.socialIcons i {
-	font-size: 1.5em;
-	color: #fff;
-	margin-right: 3%;
-	opacity: 0.7;
-	transition: 0.5s;
-}
-.socialIcons .fa-facebook-f:hover {
-	color: #87ceeb;
-	transform: translateY(-9px);
-}
-
-.socialIcons .fa-facebook-f:hover {
-	color: #87ceeb;
-	transform: translateY(-9px);
-}
-
-.socialIcons .fa-twitter:hover {
-	color: #87ceeb;
-	transform: translateY(-9px);
-}
-
-.socialIcons .fa-twitter-f:hover {
-	color: #87ceeb;
-	transform: translateY(-9px);
-}
-
-.socialIcons .fa-instagram:hover {
-	color: #87ceeb;
-	transform: translateY(-9px);
-}
-
-.socialIcons .fa-whatsapp:hover {
-	color: #87ceeb;
-	transform: translateY(-9px);
-}
-
-.socialIcons .fa-whatsapp:hover {
-	color: #87ceeb;
-	transform: translateY(-9px);
-}
-.direitos {
-	margin-top: 10px;
-	color: #fff;
-	opacity: 0.7;
-}
-.rodape {
-	max-width: 1536px;
-}
-
 .col-sm-4 h5 a {
 	color: #fff;
 	font-weight: bold;
@@ -105,6 +52,17 @@ h3 {
 	border-radius: 20px;
 }
 
+.tabelamusica th {
+	color: #00a9d4;
+	font-size: 18px;
+	text-align: right;
+}
+
+.tabelamusica td {
+	color: #fff;
+	font-size: 13px;
+}
+
 .btn {
 	padding: 10px 8px;
 	width: 50px;
@@ -116,15 +74,10 @@ h3 {
 	cursor: pointer;
 }
 
-.voltar {
-	width: auto;
-	height: auto;
-}
-
 .btn-baixar {
 	display: flex;
 	justify-content: center;
-	align-items: left;
+	align-items: center;
 	height: 100vh;
 	flex-direction: column;
 	font-family: sans-serif;
@@ -147,44 +100,4 @@ h3 {
 }
 .btn-baixar a:hover {
 	background: #00729d;
-}
-.search-box {
-	position: absolute;
-	top: 8%;
-	left: 70%;
-	transform: translate(-50%, -50%);
-	background: rgba(0, 0, 0, 0.42);
-	height: 30px;
-	border-radius: 20px;
-	padding: 5px;
-}
-
-.bt {
-	position: relative;
-	width: 25px;
-	height: 25px;
-	background-color: rgba(0, 0, 0, 0.42);
-	padding: 4px 10px;
-	margin-top: -2px;
-	cursor: pointer;
-	border-radius: 5px;
-}
-.search-txt {
-	border: none;
-	background: none;
-	outline: none;
-	float: left;
-	padding: 0;
-	color: white;
-	font-size: 14px;
-	transition: 0.4s;
-	line-height: 40px;
-	width: 0px;
-}
-.search-box:hover > .search-txt {
-	width: 240px;
-	padding: 0 6px;
-}
-.search-box:hover > .search-btn {
-	background: white;
 }
