@@ -31,6 +31,27 @@ img {
 .bgGradient2 {
 	background: linear-gradient(to right, royalblue, black);
 }
+
+#menu-h ul {
+	float: left;
+}
+
+#menu-h ul li {
+	display: inline;
+}
+
+#menu-h ul li a {
+	color: #fff;
+	padding: 10px;
+	display: inline-block;
+	transition: background 0.4s;
+}
+
+#menu-h ul li a:hover {
+	background-color: #87ceeb;
+}
+
+
 h4 {
 	color: white;
 	font-size: 20px;
