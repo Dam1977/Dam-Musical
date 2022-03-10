@@ -25,11 +25,47 @@ img {
 	padding: 3% 4%;
 	text-align: center;
 }
+
+.colcheia {
+	width: 100%;
+	float: left;
+	height: 50px;
+}
+
+.colcheia img {
+	width: 85px;
+	margin-top: -28px;
+	float: center;
+}
+
+.titulo {
+	margin-top: 100px;
+	color: #fff;
+}
 .bgGradient {
 	background: linear-gradient(to right, black, royalblue);
 }
 .bgGradient2 {
 	background: linear-gradient(to right, royalblue, black);
+}
+
+#menu-h ul {
+	float: left;
+}
+
+#menu-h ul li {
+	display: inline;
+}
+
+#menu-h ul li a {
+	color: #fff;
+	padding: 10px;
+	display: inline-block;
+	transition: background 0.4s;
+}
+
+#menu-h ul li a:hover {
+	background-color: #87ceeb;
 }
 
 .socialIcons {
@@ -96,9 +132,12 @@ img {
 	text-align: center;
 }
 .col-sm-4 img {
+	width: 100%;
 	height: 210px;
 	width: 280px;
 	margin-top: 0px;
 	padding: 15px;
 	border-radius: 20px;
+	display: inline-flex;
+	float: center;
 }
