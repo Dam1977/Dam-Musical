@@ -68,6 +68,11 @@ img {
 	background-color: #87ceeb;
 }
 
+#map {
+	height: 500px;
+	width: 100%;
+}
+
 .socialIcons {
 	width: 100%;
 }
