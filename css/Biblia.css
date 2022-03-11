@@ -1,0 +1,53 @@
+body {
+	background-image: url(../img/Guitars.jpg);
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+.container {
+	width: 100%;
+	float: left;
+	padding: 3% 4%;
+	text-align: center;
+}
+
+.bgGradient {
+	background: linear-gradient(to right, black, royalblue);
+}
+.bgGradient2 {
+	background: linear-gradient(to right, royalblue, black);
+}
+
+#menu-h ul {
+	float: left;
+}
+
+#menu-h ul li {
+	display: inline;
+}
+
+#menu-h ul li a {
+	color: #fff;
+	padding: 10px;
+	display: inline-block;
+	transition: background 0.4s;
+}
+
+#menu-h ul li a:hover {
+	background-color: #87ceeb;
+}
