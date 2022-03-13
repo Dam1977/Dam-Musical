@@ -26,18 +26,6 @@ img {
 	text-align: center;
 }
 
-.colcheia {
-	width: 100%;
-	float: left;
-	height: 50px;
-}
-
-.colcheia img {
-	width: 85px;
-	margin-top: -25xpx;
-	float: center;
-}
-
 .titulo {
 	margin-top: 100px;
 	color: #fff;
@@ -93,7 +81,6 @@ img {
 	height: 100%;
 	object-fit: cover;
 	border-radius: 15px;
-
 }
 .galeria-tems:hover {
 	transform: scale(1.1);
@@ -103,7 +90,7 @@ h3 {
 	color: #fff;
 	text-align: center;
 	margin-top: 10px;
-	font-size: 23px;
+	font-size: 25px;
 }
 
 .socialIcons {
@@ -156,10 +143,7 @@ h3 {
 	opacity: 0.7;
 }
 .rodape {
-	
-	max-width: 2200px; 
+	max-width: 1500px;
 	min-height: 5px;
 	margin-top: 100px;
-		
 }
-
