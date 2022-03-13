@@ -30,7 +30,7 @@ h3 {
 }
 .galeria-tems:hover {
 	transform: scale(1.2);
-    border: 10px solid royalblue;
+    border: 10px solid black;
 }
 footer {
 	height: 100px;
