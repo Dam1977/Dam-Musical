@@ -25,11 +25,9 @@ img {
 	padding: 3% 4%;
 	text-align: center;
 }
-.bgGradient {
-	background: linear-gradient(to right, black, royalblue);
-}
-.bgGradient2 {
-	background: linear-gradient(to right, royalblue, black);
+
+.bgbackground: {
+	background: rgba(0, 0, 0, 0.42);
 }
 
 #menu-h ul {
@@ -50,7 +48,6 @@ img {
 #menu-h ul li a:hover {
 	background-color: #87ceeb;
 }
-
 
 h4 {
 	color: white;
@@ -122,6 +119,30 @@ h4 {
 .btn-baixar a:hover {
 	background: #00729d;
 }
+.dam {
+	height: auto;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.42);
+	position: relative;
+	margin-bottom: 0px;
+	margin-top: 200px;
+	border-radius: 10px;
+	background: attachment scroll;
+	background-clip: content-box;
+	background-image: none;
+	text-align: center;
+}
+.rodape {
+	margin-top: -71px;
+	max-width: 1536px;
+}
+
+.container {
+	width: 100%;
+	position: relative;
+	align-items: baseline;
+}
 span {
 	color: #fff;
+	align-items: right;
 }

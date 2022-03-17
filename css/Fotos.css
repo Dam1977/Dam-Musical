@@ -32,12 +32,17 @@ h3 {
 	transform: scale(1.2);
     border: 10px solid black;
 }
-footer {
-	height: 100px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.rodape {
+	margin-top: 100px;
+	max-width: 1536px;
+}
+
+.container {
+	width: 100%;
+	position: relative;
+	align-items: baseline;
+}
+span {
 	color: #fff;
-	font-style: italic;
-	margin-top: 20px;
+	align-items: right;
 }
