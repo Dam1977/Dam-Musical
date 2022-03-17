@@ -12,19 +12,31 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Noto+Serif:wght@700&family=Roboto+Condensed:wght@300&display=swap" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-  <nav id="menu-h">
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="Biblia.html">Bíblia Online</a></li>
-      <li><a href="Mapas.html">Google Maps</a></li>
-      <li><a href="Fotos.html">Fotos</a></li>
-      <li><a href="#">Entrar</a></li>
-    </ul>
-  </nav>
+  <input type="checkbox" id="check">
+  <label for="check">
+    <i class="fas fa-bars" id="btn"></i>
+    <i class="fas fa-times" id="cancel"></i>
+  </label>
+      <div class="sidebar">
+        <header>Mais Opções</header>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-home"></i>Tela Inicial</a></li>
+          <li><a href="Biblia.html"><i class="fas fa-bible"></i>Bíblia Online</a></li>
+          <li><a href="Mapas.html"><i class="fas fas fa-map"></i>Google Maps</a></li>
+          <li><a href="Fotos.html"><i class="fas fa-photo-video"></i>Fotos</a></li>
+          <li><a href="#"><i class="fas fa-sign-out-alt"></i>About</a></li>
+          
+          
+        </ul>
+      </div>
+
+
+  
   <div class="container-fluid p-5 bgGradient text-white text-center">
     <br><br>
     <h1>Respire Música</h1>
