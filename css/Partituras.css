@@ -44,6 +44,9 @@ img {
 	display: inline-block;
 	transition: background 0.4s;
 }
+#menu-h ul a i {
+	margin-right: 16px;
+}
 
 #menu-h ul li a:hover {
 	background-color: #87ceeb;
@@ -74,11 +77,13 @@ h4 {
 	color: #00a9d4;
 	font-size: 18px;
 	text-align: right;
+	
 }
 
 .tabelamusica td {
 	color: #fff;
 	font-size: 13px;
+	border-top: 1.5px solid rgba(255,255,255,.1);
 }
 
 .btn {

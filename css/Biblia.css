@@ -33,6 +33,11 @@ img {
 	background: linear-gradient(to right, royalblue, black);
 }
 
+#menu-h ul a i {
+	margin-right: 26px;
+}
+
+
 #menu-h ul {
 	float: left;
 }

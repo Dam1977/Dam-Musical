@@ -31,6 +31,10 @@ img {
 .bgGradient2 {
 	background: linear-gradient(to right, royalblue, black);
 }
+#menu-h ul a i {
+	margin-right: 16px;
+}
+
 
 .socialIcons {
 	width: 100%;

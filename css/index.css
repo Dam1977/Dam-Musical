@@ -26,9 +26,9 @@
 	height: 100%;
 	width: 100%;
 	line-height: 65px;
-	font-size: 15px;
+	font-size: 20px;
 	color:white;
-	padding-left: 40px;
+	padding-left: 30px;
 	box-sizing: border-box;
 	border-top: 1px solid rgba(255,255,255,.1);
 	border-bottom: 1px solid black;
@@ -40,8 +40,8 @@ ul li :hover {
 	padding-left: 50px;
 }
 
-.sidebar ul a li {
-	margin-right: 20px;
+.sidebar ul a i {
+	margin-right: 16px;
 }
 #check {
 	display: none;
@@ -78,7 +78,7 @@ label #cancel {
 	pointer-events: none;
 }
 #check:checked ~label #cancel {
-	left: 195px;
+	left: 210px;
 }
 body {
 	background-image: url(../img/Guitars.jpg);

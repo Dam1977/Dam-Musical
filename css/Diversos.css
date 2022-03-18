@@ -31,6 +31,11 @@ video {
 	background: linear-gradient(to right, black, royalblue);
 }
 
+#menu-h ul a i {
+	margin-right: 16px;
+}
+
+
 span {
 	color: #fff;
 }
