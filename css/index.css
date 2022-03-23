@@ -137,7 +137,10 @@ img {
 }
 
 #menu-h ul li a:hover {
-	background-color: #87ceeb;
+	background-color: #000;
+}
+#menu-h ul a i {
+	margin-right: 26px;
 }
 
 .galeria-container {
