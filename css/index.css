@@ -118,6 +118,7 @@ img {
 	color: #fff;
 }
 .bgGradient {
+	margin-top: -23px;
 	background: rgba(0, 0, 0, 0.42);
 }
 
