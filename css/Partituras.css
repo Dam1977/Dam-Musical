@@ -23,7 +23,6 @@ table {
 	border-spacing: 2cm;
 }
 
-
 td {
 	text-align: left;
 	padding: 3px;
@@ -70,7 +69,6 @@ h4 {
 	margin-top: 50px;
 }
 
-
 .tabelamusica th {
 	color: #00a9d4;
 	font-size: 20px;
@@ -86,7 +84,6 @@ h4 {
 
 .baixar {
 	color: greenyellow;
-	
 }
 
 .baixar:hover {
