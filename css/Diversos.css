@@ -17,14 +17,30 @@ ul {
 
 video {
 	max-width: 100%;
-	min-width: 0;
+}
+
+iframe {
+	max-width: 100%;
+	margin-top: 25px;
+	width: 300px;
+	height: 150px;
+	box-shadow: 5px 5px 5px #fff;
+	transition: transform 0.5s linear;
+	border-radius: 5px;
+	align-items: baseline;
 }
 
 .container {
-	width: 100%;
-	float: left;
-	padding: 3% 4%;
-	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	gap: 2vw;
+	padding: 0 1vw;
+	width: 300px;
+	height: 150px;
+}
+iframe:hover {
+	transform: scale(1.2);
 }
 
 .bgGradient {
@@ -35,21 +51,6 @@ video {
 	margin-right: 16px;
 }
 
-.rodape {
-	max-width: 1536px;
-}
-
-.container {
-	width: 100%;
-	position: relative;
-	align-items: baseline;
-}
-.abaixo {
-	text-align: left;
-	height: 13px;
-	font-size: 15px;
-	float: center;
-}
 .ul {
 	width: 100%;
 	list-style: none;
