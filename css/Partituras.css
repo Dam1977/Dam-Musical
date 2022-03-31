@@ -66,89 +66,14 @@ h4 {
 	color: white;
 	font-size: 20px;
 	text-align: center;
-	margin-top: 50px;
-}
-
-.tabelamusica th {
-	color: #00a9d4;
-	font-size: 20px;
-	text-align: center;
-}
-
-.tabelamusica td {
-	color: #fff;
-	font-size: 14px;
-	border-top: 1.5px solid rgba(255, 255, 255, 0.1);
-	text-align: center;
+	margin-top: 20px;
 }
 
 .baixar {
-	color: greenyellow;
+	color: #00729d;
 }
 
-.baixar:hover {
-	transform: scale(1.2);
-	border: 5px solid #000;
-}
-
-.btn {
-	padding: 10px 8px;
-	width: 50px;
-	color: white;
-	background-color: blue;
-	border-radius: 5px;
-	text-align: right;
-	user-select: none;
-	cursor: pointer;
-}
-
-.btn-baixar {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-	flex-direction: column;
-	font-family: sans-serif;
-}
-.btn-baixar a {
-	display: block;
-	background: #00a9d4;
-	color: #fff;
-	padding: 5px;
-	cursor: pointer;
-	text-decoration: none;
-	width: 120px;
-	text-align: left;
-	border-radius: 5px;
-	font-size: 15px;
-	margin-top: -450px;
-}
-.btn-baixar p {
+.encore {
 	color: #fff;
 }
-.btn-baixar a:hover {
-	background: #00729d;
-}
-.dam {
-	height: auto;
-	width: 100%;
-	background: rgba(0, 0, 0, 0.42);
-	position: relative;
-	margin-bottom: 0px;
-	margin-top: 200px;
-	border-radius: 10px;
-	background: attachment scroll;
-	background-clip: content-box;
-	background-image: none;
-	text-align: center;
-}
-.rodape {
-	margin-top: -71px;
-	max-width: 1536px;
-}
 
-.container {
-	width: 100%;
-	position: relative;
-	align-items: baseline;
-}
