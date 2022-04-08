@@ -1,61 +1,9 @@
-body {
-	background-image: url(../img/Guitars.jpg);
-	width: 100%;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
-}
-
-a {
-	text-decoration: none;
-}
-
-ul {
-	list-style: none;
-}
-
-video {
-	max-width: 100%;
-}
-
-iframe {
-	max-width: 100%;
-	margin-top: 25px;
-	width: 300px;
-	height: 150px;
-	box-shadow: 2px 2px 2px #fff;
-	transition: transform 0.5s linear;
-	border-radius: 5px;
-	align-items: baseline;
-}
-
-.container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
-	gap: 2vw;
-	padding: 0 1vw;
-	width: 300px;
-	height: 150px;
-}
-
-#menu-h ul a i {
-	margin-right: 16px;
-}
-
-.ul {
-	width: 100%;
-	list-style: none;
-	display: flex;
-	justify-content: space-around;
-}
-
-.ul p {
-	width: 100%;
-	font-size: 14px;
-	text-align: center;
-	height: 14px;
-	color: #fff;
-	margin-top: 10px;
-}
+body{background-image:url(../img/Guitars.jpg);width:100%;background-repeat:no-repeat;background-size:cover;background-position:center;background-attachment:fixed;}
+a{text-decoration:none;}
+ul{list-style:none;}
+video{max-width:100%;}
+iframe{max-width:100%;margin-top:25px;width:300px;height:150px;box-shadow:2px 2px 2px #fff;transition:transform .5s linear;border-radius:5px;align-items:baseline;}
+.container{display:flex;flex-wrap:wrap;justify-content:space-evenly;gap:2vw;width:300px;height:150px;padding:0 1vw;}
+#menu-h ul a i{margin-right:16px;}
+.ul{width:100%;list-style:none;display:flex;justify-content:space-around;}
+.ul p{width:100%;font-size:14px;text-align:center;height:14px;color:#fff;margin-top:10px;}
