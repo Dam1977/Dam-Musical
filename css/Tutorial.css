@@ -12,8 +12,12 @@
 }
 
 body {
-	background-color: coral;
-	padding: 20px;
+	background-image: url(../img/Guitars.jpg);
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
 }
 
 .container {
@@ -23,7 +27,36 @@ body {
 	flex-wrap: wrap;
 	align-items: flex-start;
 	gap: 20px;
+	
 }
+
+#menu-h ul {
+	float: left;
+	position:absolute;
+}
+#menu-h ul li {
+	display: inline;
+}
+#menu-h ul li a {
+	color: #fff;
+	display: inline-block;
+	transition: background 0.4s;
+	padding: 10px;
+}
+#menu-h ul a i {
+	margin-right: 16px;
+	margin-top: 15px;
+}
+#menu-h ul li a:hover {
+	background-color: #063146;
+}
+
+.dam{
+	color: #fff;
+	text-align: center;
+	margin-top: 10px;
+}
+
 
 .container .main-video-container {
 	flex: 1 1 700px;
@@ -31,17 +64,21 @@ body {
 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 	background-color: #fff;
 	padding: 15px;
+	margin-top: 40px;
 }
 
 .container .main-video-container .main-video {
 	margin-bottom: 7px;
 	border-radius: 5px;
 	width: 100%;
+	
 }
 
 .container .main-video-container .main-vid-title {
 	font-size: 20px;
 	color: #444;
+	
+	
 }
 
 .container .video-list-container {
@@ -52,6 +89,7 @@ body {
 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 	background-color: #fff;
 	padding: 15px;
+	margin-top: 40px;
 }
 
 .container .video-list-container::-webkit-scrollbar {
@@ -92,7 +130,7 @@ body {
 }
 
 .container .video-list-container .list .list-video {
-	width: 100%;
+	width: 100px;
 	border-radius: 5px;
 }
 
@@ -122,7 +160,7 @@ body {
 		width: 100%;
 	}
 
-	.container .video-list-container .lis .list-title {
+	.container .video-list-container .list .list-title {
 		font-size: 15px;
 		text-align: center;
 	}
