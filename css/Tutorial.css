@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap);
 *{font-family:Poppins, sans-serif;box-sizing:border-box;outline:none;border:none;text-decoration:none;text-transform:capitalize;margin:0;padding:0;}
-body{background-image:url(../img/Guitars.jpg);width:100%;background-repeat:no-repeat;background-size:cover;background-position:center;background-attachment:fixed;}
+body{background-image:url(../img/Guitars.avif);width:100%;background-repeat:no-repeat;background-size:cover;background-position:center;background-attachment:fixed;}
 .container{max-width:1200px;display:flex;flex-wrap:wrap;align-items:flex-start;gap:20px;margin:100px auto;}
 #menu-h ul{float:left;position:absolute;}
 #menu-h ul li{display:inline;}
