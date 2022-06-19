@@ -62,6 +62,10 @@ h3 {
 	margin-top: 10px;
 	font-size: 20px;
 }
+h3:hover {
+	background-color: #063146;
+	border-radius: 5px;
+}
 
 .brand-title {
 	font-size: 1.5rem;
@@ -87,7 +91,7 @@ h3 {
 
 .navbar-links li:hover {
 	background-color: #063146;
-	border-radius: 10px;
+	border-radius: 5px;
 }
 
 .toggle-button {
