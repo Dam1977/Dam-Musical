@@ -1,6 +1,27 @@
-body{background-image:url(../img/Guitars.jpg);width:100%;background-repeat:no-repeat;background-position:center;background-attachment:fixed;}
-a{text-decoration:none;}
-ul{list-style:none;}
-img{max-width:100%;}
-.container{width:100%;float:left;text-align:center;padding:3% 4%;}
-#menu-h ul a i{margin-right:16px;}
+body {
+	background-image: url(../img/Guitars.jpg);
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+}
+a {
+	text-decoration: none;
+}
+ul {
+	list-style: none;
+}
+img {
+	max-width: 100%;
+}
+.container {
+	width: 100%;
+	float: left;
+	text-align: center;
+	padding: 3% 4%;
+}
+
+#menu-h ul a i {
+	margin-right: 16px;
+ 
+}
