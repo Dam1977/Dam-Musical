@@ -19,9 +19,6 @@
 	margin-bottom: 0;
 	padding: 40px;
 }
-.container:hover a {
-	background-color: #063146;
-}
 .container {
 	position: relative;
 	min-height: 100vh;
@@ -32,6 +29,7 @@
 	background-position: center;
 	background-attachment: fixed;
 }
+
 .container h1 {
 	color: #fff;
 	text-align: center;
@@ -95,6 +93,7 @@
 	z-index: 100;
 	cursor: pointer;
 }
+
 @media max-width 768px {
 	.container .popup-video video {
 		width: 95%;
