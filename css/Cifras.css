@@ -43,10 +43,10 @@ h2 {
 }
 .cards {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	max-width: 1000px;
+	grid-template-columns: repeat(2, 1fr);
+	max-width: 768px;
 	margin: 0 auto;
-	gap: 40px;
+	gap: 10px;
 }
 .card {
 	background-color: rgba(0, 0, 0, 0.42);
