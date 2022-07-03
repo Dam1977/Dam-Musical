@@ -81,14 +81,3 @@ h3 {
 	color: #fff;
 }
 
-@media (max-width: 500px) {
-	body {
-		text-align: center;
-		grid-template-columns: 1fr;
-	}
-	.card .user .cards img {
-		align-items: center;
-		grid-template-columns: auto;
-		display:inline-table;
-	}
-}
