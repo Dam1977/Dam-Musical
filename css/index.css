@@ -154,7 +154,7 @@ h3:hover,
 	background-color: #063146;
 	border-radius: 5px;
 }
-@media max-width 500px {
+@media (max-width: 500px){
 	.navbar-links {
 		display: none;
 		width: 100%;
