@@ -135,7 +135,7 @@ footer {
 	transition: 0.5s;
 }
 .socials a:hover i {
-	color: #40d8aa;
+	color:coral;
 	transform: translateY(-9px);
 }
 .footer-bottom {
@@ -151,7 +151,7 @@ footer {
 }
 h3:hover,
 .navbar-links li:hover {
-	background-color: #063146;
+	background-color:coral;
 	border-radius: 5px;
 }
 @media (max-width: 500px){
