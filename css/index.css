@@ -135,7 +135,7 @@ footer {
 	transition: 0.5s;
 }
 .socials a:hover i {
-	color:coral;
+	color:rgb(64, 28, 161);
 	transform: translateY(-9px);
 }
 .footer-bottom {
