@@ -60,11 +60,11 @@ h3 {
 }
 .brand-title {
 	font-size: 2rem;
-	margin: 2.5rem;
+	margin: 1.5rem;
 }
 .navbar-links ul {
 	display: flex;
-	margin: 0.9rem;
+	margin: 0;
 	padding: 0;
 }
 .navbar-links li {
@@ -136,7 +136,7 @@ footer {
 	transition: 0.5s;
 }
 .socials a:hover i {
-	color:aqua;
+	color:rgb(0, 26, 255);
 	transform: translateY(-9px);
 }
 .footer-bottom {
