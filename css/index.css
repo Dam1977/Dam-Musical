@@ -152,8 +152,8 @@ footer {
 }
 h3:hover,
 .navbar-links li:hover {
-	background-color:rgb(64, 28, 161);
-	border-radius: 5px;
+	background-color:rgb(18, 60, 197);
+	border-radius: 3px;
 }
 @media (max-width: 500px){
 	.navbar-links {
