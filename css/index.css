@@ -5,6 +5,7 @@
 	margin: 0;
 	padding: 0;
 }
+
 body {
 	background-image: url(../img/Guitars.avif);
 	width: 100%;
@@ -14,6 +15,7 @@ body {
 	background-attachment: fixed;
 	overflow-x: hidden;
 }
+
 .navbar {
 	display: flex;
 	justify-content: space-between;
@@ -22,6 +24,7 @@ body {
 	color: #fff;
 	height: 10rem;
 }
+
 .galeria-container {
 	display: flex;
 	flex-wrap: wrap;
@@ -30,6 +33,7 @@ body {
 	margin-top: 100px;
 	padding: 0 1vw;
 }
+
 .galeria-tems {
 	width: 250px;
 	height: 200px;
@@ -37,48 +41,64 @@ body {
 	transition: transform 0.5s linear;
 	margin-top: 50px;
 }
+
 .galeria-tems img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 	border-radius: 15px;
 }
+
 .galeria-tems:hover {
 	transform: scale(1.1);
 }
+
 #menu-h ul a i {
 	margin-right: 16px;
 	margin-top: 15px;
 	color: #f0f8ff;
 	text-decoration: none;
 }
+
 h3 {
 	color: #fff;
 	text-align: center;
 	margin-top: 10px;
 	font-size: 25px;
 }
+
+.icone {
+	width: 55px;
+	float: left;
+
+}
+
 .brand-title {
 	font-size: 2rem;
 	margin: 1.5rem;
 }
+
 .navbar-links ul {
 	display: flex;
 	margin: 0;
 	padding: 0;
 }
+
 .navbar-links li {
 	list-style: none;
 }
+
 .navbar-links li a {
 	text-decoration: none;
 	color: #fff;
 	display: block;
 	padding: 1rem;
 }
+
 .navbar-links ul li a {
 	font-size: 20px;
 }
+
 .toggle-button {
 	position: absolute;
 	top: 0.75rem;
@@ -89,12 +109,14 @@ h3 {
 	width: 30px;
 	height: 21px;
 }
+
 .toggle-button .bar {
 	height: 3px;
 	width: 100%;
 	background-color: #fff;
 	border-radius: 10px;
 }
+
 footer {
 	position: relative;
 	bottom: 0;
@@ -108,6 +130,7 @@ footer {
 	color: #fff;
 	margin-top: 223px;
 }
+
 .footer-content {
 	display: flex;
 	align-items: center;
@@ -115,6 +138,7 @@ footer {
 	flex-direction: column;
 	text-align: center;
 }
+
 .socials {
 	list-style: none;
 	display: flex;
@@ -122,58 +146,73 @@ footer {
 	justify-content: center;
 	margin: 1rem 0 3rem;
 }
+
 .socials li {
 	margin: 0 10px;
 }
+
 .socials a {
 	text-decoration: none;
 	color: #fff;
 }
+
 .socials a i {
 	font-size: 1.5em;
 	color: #fff;
 	margin-right: 3%;
 	transition: 0.5s;
 }
+
 .socials a:hover i {
-	color:rgb(0, 26, 255);
+	color: rgb(216, 216, 2);
 	transform: translateY(-9px);
 }
+
 .footer-bottom {
 	background: #000;
 	width: 100vw;
 	text-align: center;
 	padding: 20px 0;
 }
+
 .footer-bottom p {
 	font-size: 14px;
 	word-spacing: 2px;
 	text-transform: capitalize;
 }
+
 h3:hover,
 .navbar-links li:hover {
-	background-color:rgb(18, 60, 197);
-	border-radius: 3px;
+	background-color: rgb(0, 0, 0, 0.42);
+	border-radius: 0.5rem;
+	transform: scale(1.1);
+	
 }
-@media (max-width: 500px){
+
+@media (max-width: 500px) {
 	.navbar-links {
 		display: none;
 		width: 100%;
 	}
+
 	.navbar {
 		flex-direction: column;
 		align-items: flex-start;
 	}
+
 	.navbar-links ul {
 		width: 100%;
 		flex-direction: column;
 	}
+
 	.navbar-links li {
 		text-align: center;
 	}
+
 	.navbar-links li a {
 		padding: 0.5rem 1rem;
 	}
+
 	.toggle-button,
 	.navbar-links.active {
 		display: flex;
