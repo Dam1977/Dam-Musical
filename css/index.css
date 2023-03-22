@@ -68,14 +68,20 @@ h3 {
 }
 
 .icone {
-	width: 55px;
+	width: 50px;
 	float: left;
+	padding: 0;
 
+}
+
+.icone:hover {
+	transform: scale(0.9);
 }
 
 .brand-title {
 	font-size: 2rem;
-	margin: 1.5rem;
+	margin: 2.5rem;
+	padding: 3%;
 }
 
 .navbar-links ul {
