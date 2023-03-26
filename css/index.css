@@ -7,7 +7,7 @@
 }
 
 body {
-	background-image: url(../img/Guitars.avif);
+	background-image: linear-gradient(to top, rgb(0, 0, 0), rgb(62, 154, 207));
 	width: 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -23,7 +23,7 @@ body {
 	background: rgba(0, 0, 0, 0.42);
 	color: #fff;
 	height: 10rem;
-	
+
 }
 
 .galeria-container {
@@ -54,13 +54,6 @@ body {
 	transform: scale(1.1);
 }
 
-#menu-h ul a i {
-	margin-right: 16px;
-	margin-top: 15px;
-	color: #f0f8ff;
-	text-decoration: none;
-}
-
 h3 {
 	color: #fff;
 	text-align: center;
@@ -68,21 +61,10 @@ h3 {
 	font-size: 25px;
 }
 
-.icone {
-	width: 50px;
-	float: left;
-	padding: 0;
-
-}
-
-.icone:hover {
-	transform: scale(0.9);
-}
-
 .brand-title {
 	font-size: 2rem;
 	margin: 2.5rem;
-	
+
 }
 
 .navbar-links ul {
@@ -99,7 +81,8 @@ h3 {
 	text-decoration: none;
 	color: #fff;
 	display: block;
-	padding: 1rem;
+	padding: 1.5rem;
+
 }
 
 .navbar-links ul li a {
@@ -171,7 +154,7 @@ footer {
 }
 
 .socials a:hover i {
-	color: rgb(216, 216, 2);
+	color: rgb(16, 99, 114);
 	transform: translateY(-9px);
 }
 
@@ -193,7 +176,7 @@ h3:hover,
 	background-color: rgb(0, 0, 0, 0.42);
 	border-radius: 0.5rem;
 	transform: scale(1.1);
-	
+
 }
 
 @media (max-width: 500px) {

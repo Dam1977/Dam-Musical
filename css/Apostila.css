@@ -1,5 +1,5 @@
 body {
-	background-image: url(../img/Guitars.jpg);
+	
 	width: 100%;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -27,9 +27,4 @@ img {
 	text-align: center;
 	padding: 3% 4%;
 }
-#menu-h ul a i {
-	margin-right: 16px;
-	margin-top: 15px;
-	color: #f0f8ff;
-	text-decoration: none;
-}
+

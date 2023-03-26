@@ -5,6 +5,8 @@
 	margin: 0;
 	padding: 0;
 }
+
+
 i {
 	color: #fff;
 	margin-top: 20px;
@@ -28,7 +30,7 @@ i {
 .container {
 	position: relative;
 	min-height: 100vh;
-	background-image: url(/img/Guitars.avif);
+	background-image: linear-gradient(to top, rgb(0, 0, 0), rgb(62, 154, 207));
 	width: 100%;
 	background-repeat: no-repeat;
 	background-size: cover;

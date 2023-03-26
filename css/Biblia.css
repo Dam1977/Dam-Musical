@@ -1,5 +1,11 @@
+* {
+	text-decoration: none;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
 body {
-	background-image: url(../img/Guitars.jpg);
 	width: 100%;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -7,18 +13,18 @@ body {
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-h1{
-	height: 50px;
-	background: #fff;
-}
-
-
-a {
+.casinha a i {
+	color: #fff;
+	margin-top: 20px;
+	margin-left: 30px;
 	text-decoration: none;
 }
-ul {
-	list-style: none;
+
+h1{
+	height: 50px;
+	
 }
+
 img {
 	max-width: 100%;
 }
@@ -28,21 +34,4 @@ img {
 	float: left;
 	text-align: center;
 	padding: 3% 4%;
-}
-#menu-h ul a i {
-	margin-right: 26px;
-}
-#menu-h ul {
-	float: left;
-}
-#menu-h ul li {
-	display: inline;
-}
-#menu-h ul li a {
-	color: #fff;
-	display: inline-block;
-	padding: 10px;
-}
-#menu-h ul li a:hover {
-	background-color: #000;
 }
