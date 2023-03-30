@@ -17,6 +17,9 @@ body {
 }
 
 .navbar {
+	position: fixed;
+	top: 0;
+	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -31,7 +34,7 @@ body {
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 	gap: 2vw;
-	margin-top: 150px;
+	margin-top: 300px;
 	padding: 0 1vw;
 }
 
@@ -51,7 +54,7 @@ body {
 }
 
 .galeria-tems:hover {
-	transform: scale(1.1);
+	transform: scale(1.09);
 }
 
 h3 {
@@ -69,7 +72,7 @@ h3 {
 
 .navbar-links ul {
 	display: flex;
-	margin: 0;
+	margin-right: 15px;
 	padding: 0;
 }
 
@@ -87,7 +90,20 @@ h3 {
 
 .navbar-links ul li a {
 	font-size: 20px;
+
 }
+
+.navbar-links ul li a:hover {
+	background-color: rgba(0, 0, 0, 0.42);
+	border-radius: 0.5rem;
+	transform: scale(1.1);
+
+}
+
+h3:hover {
+	transform: scale(1.1);
+}
+
 
 .toggle-button {
 	position: absolute;
@@ -171,13 +187,6 @@ footer {
 	text-transform: capitalize;
 }
 
-h3:hover,
-.navbar-links li:hover {
-	background-color: rgb(0, 0, 0, 0.42);
-	border-radius: 0.5rem;
-	transform: scale(1.1);
-
-}
 
 @media (max-width: 500px) {
 	.navbar-links {
