@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 * {
 	box-sizing: border-box;
 	text-decoration: none;
@@ -38,6 +40,19 @@ body {
 	padding: 0 1vw;
 }
 
+.galeria-tems h3 {
+	color: #fff;
+	text-align: center;
+	margin-top: 10px;
+	font-size: 25px;
+	font-family: 'Alkatra', cursiva;
+}
+
+.galeria-tems h3:hover {
+	transform: scale(1.1);
+}
+
+
 .galeria-tems {
 	width: 250px;
 	height: 200px;
@@ -57,22 +72,16 @@ body {
 	transform: scale(1.09);
 }
 
-h3 {
-	color: #fff;
-	text-align: center;
-	margin-top: 10px;
-	font-size: 25px;
-}
-
 .brand-title {
 	font-size: 2rem;
-	margin: 2.5rem;
+	margin: 3rem;
+	font-family: 'Alkatra', cursiva;
 
 }
 
 .navbar-links ul {
 	display: flex;
-	margin-right: 15px;
+	margin-right: 3rem;
 	padding: 0;
 }
 
@@ -97,12 +106,8 @@ h3 {
 	background-color: rgba(0, 0, 0, 0.42);
 	border-radius: 0.5rem;
 	transform: scale(1.1);
-
 }
 
-h3:hover {
-	transform: scale(1.1);
-}
 
 
 .toggle-button {
@@ -187,8 +192,7 @@ footer {
 	text-transform: capitalize;
 }
 
-
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
 	.navbar-links {
 		display: none;
 		width: 100%;
@@ -197,11 +201,15 @@ footer {
 	.navbar {
 		flex-direction: column;
 		align-items: flex-start;
+		position: relative;
+		margin-bottom: -130px;
+		
 	}
 
 	.navbar-links ul {
 		width: 100%;
 		flex-direction: column;
+		
 	}
 
 	.navbar-links li {
@@ -215,5 +223,16 @@ footer {
 	.toggle-button,
 	.navbar-links.active {
 		display: flex;
+	}
+
+
+
+	.galeria-tems h3{
+		display: none;
+	}
+
+	.brand-title{
+	
+		margin-left: 25%;
 	}
 }
