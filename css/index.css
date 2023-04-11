@@ -76,7 +76,7 @@ body {
 	font-size: 2rem;
 	margin: 3rem;
 	font-family: 'Alkatra', cursiva;
-	
+
 }
 
 .navbar-links ul {
@@ -196,7 +196,80 @@ footer {
 	position: fixed;
 	bottom: 5px;
 	right: 5px;
-	
+
+}
+
+
+
+
+man {
+	display: inline-block;
+	margin-top: 200px;
+	margin-left: 5%;
+	margin-right: 5%;
+	padding: 5%;
+	text-align: center;
+	width: 90%;
+}
+
+man h2 {
+	width: 100%;
+	font-size: 33px;
+	margin: 0;
+	font-family: 'Alkatra', cursiva;
+	color: white;
+}
+
+.familia {
+	display: inline-block;
+	margin-top: 5%;
+}
+
+.familia h3 {
+	color: white;
+	margin-top: 10px;
+}
+
+.card {
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	display: inline-block;
+	width: 30%;
+	padding: 20px;
+	margin: 1%;
+	border-radius: 10px;
+	cursor: pointer;
+	margin-top: 50px;
+}
+
+.card img {
+	width: 150px;
+	border-radius: 50%;
+	border: 5px solid greenyellow;
+	margin-top: 35px;
+}
+
+.transparente {
+	color: transparent;
+}
+
+.texto-oculto {
+	display: none;
+}
+
+.card:hover {
+	background-image: linear-gradient(to top left, #ff2978, #180f4a) ;
+	color: white;
+	padding: 10px;
+}
+
+.card:hover .card-text {
+	display: none;
+}
+
+.card:hover .texto-oculto {
+	display: block;
 }
 
 @media screen and (max-width: 500px) {
@@ -210,13 +283,13 @@ footer {
 		align-items: flex-start;
 		position: relative;
 		margin-bottom: -130px;
-		
+
 	}
 
 	.navbar-links ul {
 		width: 100%;
 		flex-direction: column;
-		
+
 	}
 
 	.navbar-links li {
@@ -234,7 +307,7 @@ footer {
 
 
 
-	.galeria-tems h3{
+	.galeria-tems h3 {
 		display: none;
 	}
 
@@ -244,15 +317,15 @@ footer {
 		margin-left: 8rem;
 	}
 
-	
+
 }
 
-@media screen and (max-width: 1030px){
-		.navbar-links {
-			display: none;
-		}
+@media screen and (max-width: 1030px) {
+	.navbar-links {
+		display: none;
+	}
 
-		#whats {
-			display: none;
-		}
+	#whats {
+		display: none;
+	}
 }

@@ -1,0 +1,16 @@
+
+
+@media screen and (max-width: 1250px) {
+    .card {
+        width: 100%;
+        
+    }
+
+    man {
+        margin-top: 150px;
+    }
+
+    man h2{
+       font-size: 28px;
+    }
+}
