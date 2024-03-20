@@ -47,6 +47,12 @@ h2 {
 	margin-bottom: 30px;
 }
 
+#searchbar {
+	margin-top: 20px;
+	margin-bottom: 30px;
+	margin-left: 5rem;
+}
+
 .cards {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
