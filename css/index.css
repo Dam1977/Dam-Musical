@@ -1,64 +1,106 @@
-@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://googleapis.com');
 
+/* VARIÁVEIS GLOBAIS: Facilita a manutenção de cores e fontes */
+:root {
+	--font-main: 'Vedana', sans-serif;
+	--font-title: 'Alkatra', cursive;
+	--color-text: #ffffff;
+	--color-accent: #ff2978;
+	--bg-navbar: rgba(0, 0, 0, 0.65); /* Aumentado levemente para contraste */
+}
+
+/* RESET GLOBAL */
 * {
 	box-sizing: border-box;
 	text-decoration: none;
-	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	margin: 0;
 	padding: 0;
 }
 
 body {
 	background-image: linear-gradient(to top, rgb(0, 0, 0), rgb(2, 43, 68));
-	width: 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
+	width: 100%;
+	min-height: 100vh; /* Garante que o gradiente cubra telas muito altas */
 	overflow-x: hidden;
+	font-family:var(--font-main);
+	color: var(--color-text);
 }
 
+/* NAVBAR */
 .navbar {
 	position: fixed;
 	top: 0;
+	left: 0; /* Boa prática de fixação */
 	width: 100%;
+	min-height: 5rem; /* Removido tamanho fixo exagerado */
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background: rgba(0, 0, 0, 0.42);
-	color: #fff;
-	height: 10rem;
-
+	background: var(--bg-navbar);
+	padding: 0 5%; /* Alinhamento fluido nas laterais */
+	z-index: 1000;
+	backdrop-filter: blur(5px); /* Efeito blur também na navbar */
 }
 
+.brand-title {
+	font-size: 2rem;
+	font-family: var(--font-main);
+}
+
+.navbar-links ul {
+	display: flex;
+	list-style: none; /* Movido para o container pai */
+}
+
+.navbar-links li a {
+	color: var(--color-text);
+	display: block;
+	padding: 1rem 1.5rem;
+	font-size: 1.25rem; /* Convertido para rem */
+	transition: background-color 0.3s, transform 0.3s;
+}
+
+.navbar-links ul li a:hover {
+	background-color: rgba(255, 255, 255, 0.15);
+	border-radius: 0.5rem;
+	transform: scale(1.05);
+}
+
+.toggle-button {
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 30px;
+	height: 21px;
+	cursor: pointer; /* Feedback de clique importante */
+}
+
+.toggle-button .bar {
+	height: 3px;
+	width: 100%;
+	background-color: var(--color-text);
+	border-radius: 10px;
+}
+
+/* GALERIA DE CARDS */
 .galeria-container {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-evenly;
-	gap: 1vw;
-	margin-top: 300px;
-	padding: 0 1vw;
+	justify-content: center;
+	gap: 3rem; /* Espaçamento corrigido para acomodar o texto abaixo do card */
+	margin-top: 10rem; /* Ajustado proporcionalmente à nova altura da navbar */
+	padding: 2rem 5%;
 }
-
-.galeria-cards h3 {
-	color: #fff;
-	text-align: center;
-	margin-top: 10px;
-	font-size: 25px;
-	font-family: 'Alkatra', cursiva;
-}
-
-.galeria-cards h3:hover {
-	transform: scale(1.1);
-}
-
 
 .galeria-cards {
 	width: 300px;
 	height: 200px;
-	box-shadow: 5px 5px 5px #000;
-	transition: transform 0.5s linear;
-	margin-top: 50px;
+	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+	transition: transform 0.4s ease;
 }
 
 .galeria-cards img {
@@ -68,195 +110,79 @@ body {
 	border-radius: 10px;
 }
 
-.galeria-cards:hover {
-	transform: scale(1.09);
-}
-
-.brand-title {
-	font-size: 2rem;
-	margin: 3rem;
-	font-family: 'Alkatra', cursiva;
-
-}
-
-.navbar-links ul {
-	display: flex;
-	margin-right: 10px;
-	padding: 0;
-}
-
-.navbar-links li {
-	list-style: none;
-}
-
-.navbar-links li a {
-	text-decoration: none;
-	color: #fff;
-	display: block;
-	padding: 1.5rem;
-
-}
-
-.navbar-links ul li a {
-	font-size: 20px;
-
-}
-
-.navbar-links ul li a:hover {
-	background-color: rgba(0, 0, 0, 0.42);
-	border-radius: 0.5rem;
-	transform: scale(1.1);
-}
-
-.toggle-button {
-	position: absolute;
-	top: 0.75rem;
-	right: 1rem;
-	display: none;
-	flex-direction: column;
-	justify-content: space-between;
-	width: 30px;
-	height: 21px;
-}
-
-.toggle-button .bar {
-	height: 3px;
-	width: 100%;
-	background-color: #fff;
-	border-radius: 10px;
-}
-
-man {
-	display: inline-block;
-	margin-top: 200px;
-	margin-left: 5%;
-	margin-right: 5%;
-	padding: 5%;
+.galeria-cards h3 {
 	text-align: center;
-	width: 90%;
+	margin-top: 0.75rem;
+	font-size: 1.5rem;
+	font-family: var(--font-main);
+	color: var(--color-text);
 }
 
-man h2 {
+.galeria-cards:hover {
+	transform: scale(1.05);
+}
+
+/* CONTEÚDO PRINCIPAL (FAMÍLIA) */
+main {
+	margin-top: 6rem;
+	padding: 2rem 5%;
+	text-align: center;
 	width: 100%;
-	font-size: 33px;
-	margin: 0;
-	font-family: 'Alkatra', cursiva;
-	color: white;
+}
+
+main h2 {
+	font-size: 2rem;
+	margin-bottom: 2rem;
+	font-family: var(--font-main);
 }
 
 .familia {
-	display: inline-block;
-	margin-top: 5%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1.25rem;
+	width: 100%;
 }
 
 .familia h3 {
-	color: white;
-	margin-top: 10px;
+	margin-top: 0.75rem;
 }
 
+/* CARTÕES DA FAMÍLIA */
 .card {
 	background: rgba(255, 255, 255, 0.1);
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
-	display: inline-block;
-	width: 30%;
-	padding: 20px;
-	margin: 1%;
+	width: 300px;
+	padding: 25px;
 	border-radius: 10px;
 	cursor: pointer;
-	margin-top: 50px;
+	transition: background 0.4s ease, transform 0.3s ease;
+	border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .card img {
-	width: 150px;
+	width: 130px;
+	height: 130px;
+	object-fit: cover;
 	border-radius: 50%;
-	border: 5px solid greenyellow;
-	margin-top: 35px;
+	border: 4px solid greenyellow;
+	margin-bottom: 15px;
 }
 
 .transparente {
 	color: transparent;
+	user-select: none;
 }
 
 .texto-oculto {
 	display: none;
 }
 
-footer {
-	position: relative;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background: rgba(0, 0, 0, 0.42);
-	height: auto;
-	width: 100vw;
-	font-family: "Open Sans";
-	padding-top: 50px;
-	color: #fff;
-	margin-top: 223px;
-}
-
-.footer-content {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	text-align: center;
-}
-
-.socials {
-	list-style: none;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: 1rem 0 3rem;
-}
-
-.socials li {
-	margin: 0 10px;
-}
-
-.socials a {
-	text-decoration: none;
-	color: #fff;
-}
-
-.socials a i {
-	font-size: 1.5em;
-	color: #fff;
-	margin-right: 3%;
-	transition: 0.5s;
-}
-
-.footer-bottom {
-	background: #000;
-	width: 100vw;
-	text-align: center;
-	padding: 20px 0px;
-}
-
-.footer-bottom p {
-	font-size: 14px;
-	word-spacing: 2px;
-	text-transform: capitalize;
-}
-
-#whats {
-	position: fixed;
-	bottom: 5px;
-	right: 5px;
-
-}
-
-.socials a:hover i {
-	color: rgb(16, 99, 114);
-	transform: translateY(-9px);
-}
-
+/* Estado de Hover consolidado */
 .card:hover {
-	background-image: linear-gradient(to top left, #ff2978, #180f4a);
-	color: white;
-	padding: 10px;
+	background-image: linear-gradient(to top left, var(--color-accent), #180f4a);
+	transform: translateY(-5px);
 }
 
 .card:hover .card-text {
@@ -267,25 +193,91 @@ footer {
 	display: block;
 }
 
+/* RODAPÉ (FOOTER) */
+footer {
+	background: rgba(0, 0, 0, 0.7);
+	width: 100%;
+	padding-top: 40px;
+	margin-top: 8rem;
+}
+
+.socials {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 2rem;
+}
+
+.socials li {
+	margin: 0 15px;
+}
+
+.socials a i {
+	font-size: 1.8em;
+	color: var(--color-text);
+	transition: transform 0.3s, color 0.3s;
+}
+
+.socials a:hover i {
+	color: var(--color-accent);
+	transform: translateY(-5px);
+}
+
+.footer-bottom {
+	background: #000;
+	width: 100%;
+	text-align: center;
+	padding: 20px 0;
+}
+
+.footer-bottom p {
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+
+/* BOTÃO FLUTUANTE DO WHATSAPP */
+#whats {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 9999;
+    display: inline-block; /* Garante que o link se comporte como um bloco estável */
+    width: 60px;  /* Força o tamanho correto no link */
+    height: 60px; /* Força o tamanho correto no link */
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#whats img {
+    display: block; /* Remove espaçamentos fantasmas de elementos de texto */
+    width: 100%;    /* Faz a imagem ocupar o tamanho exato do link pai */
+    height: 100%;   /* Faz a imagem ocupar o tamanho exato do link pai */
+    object-fit: contain;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
+}
+
+#whats:hover {
+    transform: scale(1.1) rotate(5deg); /* Efeito suave e centralizado */
+}
+
+/* REVISÃO DE RESPONSIVIDADE (MEDIA QUERIES) */
 @media screen and (max-width: 1024px) {
+	.navbar {
+		flex-direction: row; /* Mantém marca e botão hambúrguer na mesma linha */
+		flex-wrap: wrap;
+		padding: 1rem 5%;
+	}
+
 	.navbar-links {
 		display: none;
 		width: 100%;
-
-	}
-
-	.navbar {
-		flex-direction: column;
-		align-items: flex-start;
-		position: relative;
-
-
+		order: 3; /* Força o menu a quebrar para baixo da marca */
+		margin-top: 1rem;
 	}
 
 	.navbar-links ul {
 		width: 100%;
 		flex-direction: column;
-
 	}
 
 	.navbar-links li {
@@ -293,62 +285,24 @@ footer {
 	}
 
 	.navbar-links li a {
-		padding: 0.5rem 1rem;
+		padding: 1rem;
 	}
 
-	.toggle-button,
+	.toggle-button {
+		display: flex;
+	}
+
 	.navbar-links.active {
 		display: flex;
 	}
 
 	.brand-title {
-
-		text-align: center;
-		margin-left: 0;
-	}
-
-	.galeria-container {
-		margin-top: 250px;
-	}
-
-	hr {
-		margin-top: -100px;
-	}
-
-}
-
-@media screen and (max-width: 1024px) {
-
-	.navbar-links {
-		display: none;
-	}
-
-	#whats {
-		display: none;
-	}
-
-	.galeria-container {
-		width: 50%;
-		display: block;
-		margin-left: 25%;
-
-	}
-
-	.brand-title {
-
-		text-align: center;
-		width: 100%;
-	}
-
-}
-
-@media screen  and (max-width: 500px){
-	.galeria-container {
-		width: 80%;
-		text-align: center;
+		text-align: left;
+		width: auto;
 		margin: 0;
-		padding: 0;
-		margin-top: 250px;
-		margin-left: 10%;
+	}
+
+	.galeria-container {
+		margin-top: 8rem; /* Ajustado para não colidir com o cabeçalho mobile */
 	}
 }
