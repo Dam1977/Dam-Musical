@@ -1,60 +1,85 @@
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS DO BODY
+   ========================================================================== */
 body {
-
-	width: 100%;
-	height: 100vh;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
-
+    width: 100%;
+    min-height: 100vh; /* Correção: min-height garante que o fundo cubra toda a página, mesmo com rolagem */
+    background-color: #1a1a1a; /* Cor de segurança caso a imagem de fundo falhe */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Verdana', sans-serif;
 }
 
+/* ==========================================================================
+   2. HEADER E TEXTOS (Alinhamento Otimizado)
+   ========================================================================== */
+/* Seus estilos personalizados para o topo */
 h1 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	color: #fff;
-	font-size: 2.5rem;
-	margin-top: 20px;
-}
-
-i {
-	color: #fff;
-	margin-top: 20px;
-	margin-left: 30px;
+    width: 100%;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: 'Verdana', sans-serif;
+    text-align: center; /* Substitui o flexbox antigo */
+    margin-top: 15px;
+    margin-bottom: 0;
 }
 
 h3 {
-	height: 100px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: #fff;
-
-	font-size: 1.8rem;
-	font-weight: 600;
-	margin-top: -50px;
+      width: 100%;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: 'Verdana', serif;
+    text-align: center; /* Substitui o flexbox antigo */
+    margin-top: 25px;
+    margin-bottom: 0;
 }
 
-img {
-	border-radius: 5px;
-	border: 10px solid #fff;
-	box-shadow: 5px 5px 5px #000;
+/* Ícone da Casinha (Home) */
+.casinha i {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-left: 30px;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-img:hover {
-	transform: scale(1);
-	border: 10px solid #000;
+.casinha a:hover i {
+    color: #ffc107; /* Muda para dourado ao passar o mouse */
+    transform: scale(1.2); /* Leve pulo no ícone */
 }
 
+/* ==========================================================================
+   3. GALERIA E IMAGENS (Efeito Moldura de Foto)
+   ========================================================================== */
+/* Força todas as imagens a terem o mesmo tamanho e não distorcerem */
+.item img {
+    width: 100%;
+    height: 250px; /* Mantém a grade perfeitamente alinhada */
+    object-fit: cover; /* Recorta a imagem sem amassar */
+    border-radius: 5px;
+    border: 8px solid #ffffff; /* Moldura branca estilo foto polaroid */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Sombra mais suave e moderna */
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito Hover nas Imagens */
+.item img:hover {
+    transform: scale(1.04); /* Correção: antes estava 'scale(1)', mudei para dar um leve zoom */
+    border-color: #ffc107; /* Em vez de preto puro, uma borda dourada/instrumento musical destaca mais */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Aumenta a sombra no hover dando efeito de profundidade */
+}
+
+/* ==========================================================================
+   4. RODAPÉ E UTILITÁRIOS
+   ========================================================================== */
 .rodape {
-	margin-top: 100px;
-	max-width: 1536px;
-}
-
-.container {
-	width: 100%;
-	position: relative;
-	align-items: baseline;
+    margin-top: 60px;
+    padding: 20px 0;
+    max-width: 1536px;
+    color: #fff;
+    text-align: center;
 }

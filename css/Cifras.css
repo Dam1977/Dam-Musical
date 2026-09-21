@@ -40,7 +40,7 @@ i {
 h2 {
 	display: flex;
 	justify-content: center;
-	font-family: Heebo;
+	font-family: Verdana;
 	font-size: 30px;
 	color: #fff;
 	margin: 0;
@@ -84,7 +84,7 @@ h2 {
 ul li a {
 	margin-top: 20px;
 	text-align: center;
-	font-family: Roboto;
+	font-family: Verdana;
 	font-size: 14px;
 	color: #fff;
 	line-height: 3.5;
