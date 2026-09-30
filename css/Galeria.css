@@ -15,11 +15,11 @@ body {
    2. HEADER E TEXTOS (Customização Segura de Fontes)
    ========================================================================== */
 
-/* Ícone da Casinha (Home) - Alinhamento limpo */
-.casinha a i {
+/* Ícone da Casinha (Home) */
+   .casinha a  {
 	margin-left: 20px;
 	margin-top: 30px;
-	color: #ffffff;
+	color: #f0f8ff;
 	text-decoration: none;
 }
 
