@@ -1,23 +1,20 @@
-* {
-	text-decoration: none;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-
 body {
-	width: 100%;
+
+	background-image: linear-gradient(to top, rgb(0, 0, 0), rgb(2, 43, 68));
 	background-repeat: no-repeat;
+	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
-	
+	width: 100%;
+	min-height: 100vh; /* Garante que o gradiente cubra telas muito altas */
+	overflow-x: hidden;
+
 }
 
-/* Ícone da Casinha (Home) */
 .casinha a i {
+	margin-left: 20px;
+	margin-top: 30px;
 	color: #ffffff;
-	margin-top: 20px;
-	margin-left: 30px;
 	text-decoration: none;
 }
 
@@ -42,15 +39,4 @@ p {
 	height: 1.5rem;
 	font-family: 'Roboto', sans-serif;
 	font-size: 1rem;
-}
-
-img {
-	max-width: 100%;
-}
-
-.container {
-	width: 100%;
-	float: left;
-	text-align: center;
-	padding: 3% 4%;
 }

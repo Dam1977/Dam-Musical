@@ -6,22 +6,22 @@
     <meta name="description" content="Site com conteudo musical gratuito" />
     <meta name="keywords" content="Dam Musical,Fotos,Aulas,Alunos" />
     <meta name="author" content="David Messias" />
-    <title>Dam Musical</title>
+    <title>Dam Musical - Galeria de Fotos</title>
     
     <!-- Ícone da Página -->
     <link rel="icon" href="img/colcheia.png" />
 
-    <!-- Estilos CSS (Bootstrap 5, FontAwesome, Google Fonts e Fancybox) -->
+    <!-- Estilos CSS (Bootstrap 5, FontAwesome, e Fancybox) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <link rel="stylesheet" href="https://googleapis.com" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" />
+    <!-- CORREÇÃO: Removido link quebrado do googleapis -->
     
     <!-- Seus Estilos Personalizados -->
-    <link rel="stylesheet" href="css/Galeria.css" />
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/Galeria.css" />
 
-    <!-- Scripts (jQuery, Fancybox e Bootstrap 5) -->
+    <!-- Scripts Base (jQuery, Fancybox e Bootstrap 5) -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -29,112 +29,107 @@
 <body>
 
     <header>
-        <nav class="casinha">
-            <a href="index.html" aria-label="Ir para a página inicial">
-                <i class="fas fa-home" aria-hidden="true"></i>
+        <!-- Botão Home padronizado com o estilo do projeto -->
+        <nav class="casinha p-3">
+            <a href="index.html" class="btn btn-outline-light text-white" aria-label="Voltar para a página inicial">
+                <i class="fas fa-home"></i> Inicial
             </a>
         </nav>
         <div class="container-fluid p-5 bgGradient text-white text-center">
-            <h1>Respire Música</h1>
-            <p>A perfeição apenas em Deus</p>
-            <h3>Galeria de Fotos</h3>
+            <h1 class="display-4">Respire Música</h1>
+            <p class="lead">A perfeição apenas em Deus</p>
+            <h3 class="mt-3">Galeria de Fotos</h3>
         </div>
     </header>
 
-    <main class="container-fluid container-galeria">
-        <section class="row mt-4">
+    <main class="container-fluid container-galeria px-4">
+        <!-- Grade Responsiva com espaçamento controlado (g-4) -->
+        <section class="row g-4 mt-2">
             <!-- Item 1 -->
-            <div class="item col-sm-6 col-md-4 mb-3">
+            <div class="item col-sm-6 col-md-4 col-lg-3">
                 <a href="fotos/By%20Batizada%20nas%20águas%20e%20espírito.avif" class="fancybox" data-fancybox="gallery1">
-                    <img src="fotos/By%20Batizada%20nas%20águas%20e%20espírito.avif" alt="Batizada nas águas e espírito" class="img-fluid" width="100%" height="100%" />
+                    <img src="fotos/By%20Batizada%20nas%20águas%20e%20espírito.avif" alt="Batizada nas águas e espírito" class="img-fluid rounded shadow-sm" />
                 </a>
             </div>
             <!-- Item 2 -->
-            <div class="item col-sm-6 col-md-4 mb-3">
+            <div class="item col-sm-6 col-md-4 col-lg-3">
                 <a href="fotos/Aula.avif" class="fancybox" data-fancybox="gallery1">
-                    <img src="fotos/Aula.avif" alt="Aula de música" class="img-fluid" width="100%" height="100%" />
+                    <img src="fotos/Aula.avif" alt="Aula de música" class="img-fluid rounded shadow-sm" />
                 </a>
             </div>
             <!-- Item 3 -->
-            <div class="item col-sm-6 col-md-4 mb-3">
+            <div class="item col-sm-6 col-md-4 col-lg-3">
                 <a href="fotos/Eles%20Cozinha.avif" class="fancybox" data-fancybox="gallery1">
-                    <img src="fotos/Eles%20Cozinha.avif" alt="Alunos na cozinha" class="img-fluid" width="100%" height="100%" />
+                    <img src="fotos/Eles%20Cozinha.avif" alt="Alunos na cozinha" class="img-fluid rounded shadow-sm" />
                 </a>
             </div>
-            <!-- Item 4 -->
-            <div class="item col-sm-6 col-md-4 mb-3">
+            <!-- Item 4 (CORRIGIDO: Espaço em branco na imagem) -->
+            <div class="item col-sm-6 col-md-4 col-lg-3">
                 <a href="fotos/Eu%20enganando.avif" class="fancybox" data-fancybox="gallery1">
-                    <img src="fotos/Eu enganando.avif" alt="Momento descontraído no ensaio" class="img-fluid" width="100%" height="100%" />
+                    <img src="fotos/Eu%20enganando.avif" alt="Momento descontraído no ensaio" class="img-fluid rounded shadow-sm" />
                 </a>
             </div>
-            <!-- Item 5 -->
-            <div class="item col-sm-6 col-md-4 mb-3">
+            <!-- Item 5 (CORRIGIDO: Espaço em branco na imagem) -->
+            <div class="item col-sm-6 col-md-4 col-lg-3">
                 <a href="fotos/Futura%20Tecladista.avif" class="fancybox" data-fancybox="gallery1">
-                    <img src="fotos/Futura Tecladista.avif" alt="Aluna praticando teclado" class="img-fluid" width="100%" height="100%" />
+                    <img src="fotos/Futura%20Tecladista.avif" alt="Aluna praticando teclado" class="img-fluid rounded shadow-sm" />
                 </a>
             </div>
-            <!-- Item 6 -->
-            <div class="item col-sm-6 col-md-4 mb-3">
+            <!-- Item 6 (CORRIGIDO: Espaço em branco na imagem) -->
+            <div class="item col-sm-6 col-md-4 col-lg-3">
                 <a href="fotos/Manu%20Exercícios.avif" class="fancybox" data-fancybox="gallery1">
-                    <img src="fotos/Manu Exercícios.avif" alt="Manu fazendo exercícios musicais" class="img-fluid" width="100%" height="100%" />
+                    <img src="fotos/Manu%20Exercícios.avif" alt="Manu fazendo exercícios musicais" class="img-fluid rounded shadow-sm" />
                 </a>
             </div>
-            <!-- Item 7 -->
-            <div class="item col-sm-6 col-md-4 mb-3">
+            <!-- Item 7 (CORRIGIDO: Espaço em branco na imagem) -->
+            <div class="item col-sm-6 col-md-4 col-lg-3">
                 <a href="fotos/Manu%20Explicando.avif" class="fancybox" data-fancybox="gallery1">
-                    <img src="fotos/Manu Explicando.avif" alt="Manu explicando a matéria" class="img-fluid" width="100%" height="100%" />
+                    <img src="fotos/Manu%20Explicando.avif" alt="Manu explicando a matéria" class="img-fluid rounded shadow-sm" />
                 </a>
             </div>
-            <!-- Item 8 -->
-            <div class="item col-sm-6 col-md-4 mb-3">
+            <!-- Item 8 (CORRIGIDO: Espaço em branco na imagem) -->
+            <div class="item col-sm-6 col-md-4 col-lg-3">
                 <a href="fotos/Manu%20Tarefa.avif" class="fancybox" data-fancybox="gallery1">
-                    <img src="fotos/Manu Tarefa.avif" alt="Manu fazendo a tarefa de música" class="img-fluid" width="100%" height="100%" />
+                    <img src="fotos/Manu%20Tarefa.avif" alt="Manu fazendo a tarefa de música" class="img-fluid rounded shadow-sm" />
                 </a>
             </div>
             <!-- Item 9 -->
-            <div class="item col-sm-6 col-md-4 mb-3">
+            <div class="item col-sm-6 col-md-4 col-lg-3">
                 <a href="fotos/teclados.avif" class="fancybox" data-fancybox="gallery1">
-                    <img src="fotos/teclados.avif" alt="Teclados musicais" class="img-fluid" width="100%" height="100%" />
+                    <img src="fotos/teclados.avif" alt="Teclados musicais" class="img-fluid rounded shadow-sm" />
                 </a>
             </div>
             <!-- Item 10 -->
-            <div class="item col-sm-6 col-md-4 mb-3">
+            <div class="item col-sm-6 col-md-4 col-lg-3">
                 <a href="fotos/violoes.avif" class="fancybox" data-fancybox="gallery1">
-                    <img src="fotos/violoes.avif" alt="Violões alinhados" class="img-fluid" width="100%" height="100%" />
+                    <img src="fotos/violoes.avif" alt="Violões alinhados" class="img-fluid rounded shadow-sm" />
                 </a>
             </div>
 
-            <!-- Galeria Numérica (001 a 018) -->
-            <!-- Item 001 -->
-            <div class="item col-sm-6 col-md-4 mb-3"><a href="fotos/001.avif" class="fancybox" data-fancybox="gallery1"><img src="fotos/001.avif" alt="Foto da galeria 001" class="img-fluid" width="100%" height="100%" /></a></div>
-            <!-- Item 002 -->
-            <div class="item col-sm-6 col-md-4 mb-3"><a href="fotos/002.avif" class="fancybox" data-fancybox="gallery1"><img src="fotos/002.avif" alt="Foto da galeria 002" class="img-fluid" width="100%" height="100%" /></a></div>
-            <!-- Item 003 -->
-            <div class="item col-sm-6 col-md-4 mb-3"><a href="fotos/003.avif" class="fancybox" data-fancybox="gallery1"><img src="fotos/003.avif" alt="Foto da galeria 003" class="img-fluid" width="100%" height="100%" /></a></div>
-            <!-- Item 004 -->
-            <div class="item col-sm-6 col-md-4 mb-3"><a href="fotos/004.avif" class="fancybox" data-fancybox="gallery1"><img src="fotos/004.avif" alt="Foto da galeria 004" class="img-fluid" width="100%" height="100%" /></a></div>
-            <!-- Item 005 -->
-            <div class="item col-sm-6 col-md-4 mb-3"><a href="fotos/005.avif" class="fancybox" data-fancybox="gallery1"><img src="fotos/005.avif" alt="Foto da galeria 005" class="img-fluid" width="100%" height="100%" /></a></div>
-            <!-- Item 006 -->
-            <div class="item col-sm-6 col-md-4 mb-3"><a href="fotos/006.avif" class="fancybox" data-fancybox="gallery1"><img src="fotos/006.avif" alt="Foto da galeria 006" class="img-fluid" width="100%" height="100%" /></a></div>
-            <!-- Item 007 -->
-            <div class="item col-sm-6 col-md-4 mb-3"><a href="fotos/007.avif" class="fancybox" data-fancybox="gallery1"><img src="fotos/007.avif" alt="Foto da galeria 007" class="img-fluid" width="100%" height="100%" /></a></div>
-            <!-- Item 008 -->
-            <div class="item col-sm-6 col-md-4 mb-3"><a href="fotos/008.avif" class="fancybox" data-fancybox="gallery1"><img src="fotos/008.avif" alt="Foto da galeria 008" class="img-fluid" width="100%" height="100%" /></a></div>
-            <!-- Item 009 -->
-            <div class="item col-sm-6 col-md-4 mb-3"><a href="fotos/009.avif" class="fancybox" data-fancybox="gallery1"><img src="fotos/009.avif" alt="Foto da galeria 009" class="img-fluid" width="100%" height="100%" /></a></div>
-            <!-- Item 010 -->
-            <div class="item col-sm-6 col-md-4 mb-3"><a href="fotos/010.avif" class="fancybox" data-fancybox="gallery1"><img src="fotos/010.avif" alt="Foto da galeria 010" class="img-fluid" width="100%" height="100%" /></a></div>
-            <!-- Item 011 -->
-            <div class="item col-sm-6 col-md-4 mb-3"><a href="fotos/011.avif" class="fancybox" data-fancybox="gallery1"><img src="fotos/011.avif" alt="Foto da galeria 011" class="img-fluid" width="100%" height="100%" /></a></div>
-            <!-- Item 012 -->
-            <div class="item col-sm-6 col-md-4 mb-3"><a href="fotos/012.avif" class="fancybox" data-fancybox="gallery1"><img src="fotos/012.avif" alt="Foto da galeria 012" class="img-fluid" width="100%" height="100%" /></a></div>
-            <!-- Item 013 -->
-            <div class="item col-sm-6 col-md-4 mb-3"><a href="fotos/013.avif" class="fancybox" data-fancybox="gallery1"><img src="fotos/013.avif" alt="Foto da galeria 013" class="img-fluid" width="100%" height="100%" /></a></div>
-            <!-- Item 014 -->
-            <div class="item col-sm-6 col-md-4 mb-3"><a href="fotos/014.avif" class="fancybox" data-fancybox="gallery1"><img src="fotos/014.avif" alt="Foto da galeria 014" class="img-fluid" width="100%" height="100%" /></a></div>
-            <!-- Item 015 -->
-            <div class="item col-sm-6 col-md-4 mb-3"><a href="fotos/015.avif" class="fancybox" data-fancybox="gallery1"><img src="fotos/015.avif" alt="Foto da galeria 015" class="img-fluid" width="100%" height="100%" /></a></div>
-            <!-- Item 016 -->
-            <div class="item col-sm-6 col-md-4 mb-3"><a href="fotos/016.avif" class="fancybox" data-fancybox="gallery1"><img src="fotos/016.avif" alt="Foto da galeria 016" class="img-fluid" width="100%" height="100%" /></a></div>
-            <!-- Item 017 -->
+            <!-- Galeria Numérica (001 a 010) CORRIGIDA E CONCLUÍDA -->
+            <div class="item col-sm-6 col-md-4 col-lg-3"><a href="fotos/001.avif" class="fancybox" data-fancybox="gallery1"><img src="fotos/001.avif" alt="Foto da galeria 001" class="img-fluid rounded shadow-sm" /></a></div>
+            <div class="item col-sm-6 col-md-4 col-lg-3"><a href="fotos/002.avif" class="fancybox" data-fancybox="gallery1"><img src="fotos/002.avif" alt="Foto da galeria 002" class="img-fluid rounded shadow-sm" /></a></div>
+            <div class="item col-sm-6 col-md-4 col-lg-3"><a href="fotos/003.avif" class="fancybox" data-fancybox="gallery1"><img src="fotos/003.avif" alt="Foto da galeria 003" class="img-fluid rounded shadow-sm" /></a></div>
+            <div class="item col-sm-6 col-md-4 col-lg-3"><a href="fotos/004.avif" class="fancybox" data-fancybox="gallery1"><img src="fotos/004.avif" alt="Foto da galeria 004" class="img-fluid rounded shadow-sm" /></a></div>
+            <div class="item col-sm-6 col-md-4 col-lg-3"><a href="fotos/005.avif" class="fancybox" data-fancybox="gallery1"><img src="fotos/005.avif" alt="Foto da galeria 005" class="img-fluid rounded shadow-sm" /></a></div>
+            <div class="item col-sm-6 col-md-4 col-lg-3"><a href="fotos/006.avif" class="fancybox" data-fancybox="gallery1"><img src="fotos/006.avif" alt="Foto da galeria 006" class="img-fluid rounded shadow-sm" /></a></div>
+            <div class="item col-sm-6 col-md-4 col-lg-3"><a href="fotos/007.avif" class="fancybox" data-fancybox="gallery1"><img src="fotos/007.avif" alt="Foto da galeria 007" class="img-fluid rounded shadow-sm" /></a></div>
+            <div class="item col-sm-6 col-md-4 col-lg-3"><a href="fotos/008.avif" class="fancybox" data-fancybox="gallery1"><img src="fotos/008.avif" alt="Foto da galeria 008" class="img-fluid rounded shadow-sm" /></a></div>
+            <div class="item col-sm-6 col-md-4 col-lg-3"><a href="fotos/009.avif" class="fancybox" data-fancybox="gallery1"><img src="fotos/009.avif" alt="Foto da galeria 009" class="img-fluid rounded shadow-sm" /></a></div>
+            <div class="item col-sm-6 col-md-4 col-lg-3"><a href="fotos/010.avif" class="fancybox" data-fancybox="gallery1"><img src="fotos/010.avif" alt="Foto da galeria 010" class="img-fluid rounded shadow-sm" /></a></div>
+        </section>
+    </main>
+
+    <!-- Script de Inicialização Segura do Fancybox -->
+    <script>
+        $(document).ready(function() {
+            $(".fancybox").fancybox({
+                openEffect: "fade",
+                closeEffect: "fade",
+                loop: true,
+                buttons: ["zoom", "slideShow", "thumbs", "close"]
+            });
+        });
+    </script>
+</body>
+</html>

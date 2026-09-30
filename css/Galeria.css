@@ -3,74 +3,73 @@
    ========================================================================== */
 body {
     width: 100%;
-    min-height: 100vh; /* Correção: min-height garante que o fundo cubra toda a página, mesmo com rolagem */
-    background-color: #1a1a1a; /* Cor de segurança caso a imagem de fundo falhe */
+    min-height: 100vh; 
+    background-color: #1a1a1a; 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    font-family: 'Verdana', sans-serif;
 }
 
 /* ==========================================================================
-   2. HEADER E TEXTOS (Alinhamento Otimizado)
+   2. HEADER E TEXTOS (Customização Segura de Fontes)
    ========================================================================== */
-/* Seus estilos personalizados para o topo */
+
+/* Ícone da Casinha (Home) - Alinhamento limpo */
+.casinha a i {
+	margin-left: 20px;
+	margin-top: 30px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/* CORREÇÃO: Removido as alturas fixas e flex globais para evitar sobreposição de textos */
+h1, h3, p {
+	font-family: 'Roboto', sans-serif;
+	color: #ffffff;
+}
+
 h1 {
-    width: 100%;
-    color: #fff;
-    font-size: 1.8rem;
-    font-weight: 600;
-    font-family: 'Verdana', sans-serif;
-    text-align: center; /* Substitui o flexbox antigo */
-    margin-top: 15px;
-    margin-bottom: 0;
+	font-size: 2.5rem;
+    font-weight: 700;
 }
 
 h3 {
-      width: 100%;
-    color: #fff;
-    font-size: 1.8rem;
-    font-weight: 600;
-    font-family: 'Verdana', serif;
-    text-align: center; /* Substitui o flexbox antigo */
-    margin-top: 25px;
-    margin-bottom: 0;
+    font-size: 1.75rem;
 }
 
-/* Ícone da Casinha (Home) */
-.casinha i {
-    color: #fff;
-    font-size: 1.5rem;
-    margin-top: 20px;
-    margin-left: 30px;
-    transition: transform 0.3s ease, color 0.3s ease;
+p {
+	font-size: 1rem;
 }
 
-.casinha a:hover i {
-    color: #ffc107; /* Muda para dourado ao passar o mouse */
-    transform: scale(1.2); /* Leve pulo no ícone */
-}
 
 /* ==========================================================================
-   3. GALERIA E IMAGENS (Efeito Moldura de Foto)
+   3. GALERIA E IMAGENS (Efeito Moldura de Foto Polaroid)
    ========================================================================== */
-/* Força todas as imagens a terem o mesmo tamanho e não distorcerem */
-.item img {
-    width: 100%;
-    height: 250px; /* Mantém a grade perfeitamente alinhada */
-    object-fit: cover; /* Recorta a imagem sem amassar */
-    border-radius: 5px;
-    border: 8px solid #ffffff; /* Moldura branca estilo foto polaroid */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Sombra mais suave e moderna */
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+.container-galeria .item a {
+    display: block;
+    overflow: hidden;
+    border-radius: 6px;
+    background-color: #ffffff; /* Fundo branco que simula a base da foto */
+    padding: 8px; /* Cria o espaçamento interno para o efeito Polaroid */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efeito Hover nas Imagens */
-.item img:hover {
-    transform: scale(1.04); /* Correção: antes estava 'scale(1)', mudei para dar um leve zoom */
-    border-color: #ffc107; /* Em vez de preto puro, uma borda dourada/instrumento musical destaca mais */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Aumenta a sombra no hover dando efeito de profundidade */
+/* CORREÇÃO: Ajuste na tag img para trabalhar em harmonia com as proporções */
+.container-galeria .item img {
+    width: 100%;
+    height: 250px; /* Mantém todas as fotos rigorosamente com a mesma altura */
+    object-fit: cover; /* Recorta e adapta sem achatar ou esticar a imagem */
+    border-radius: 3px;
+    display: block;
+}
+
+/* Efeito Hover nos Contêineres das Fotos (Mais elegante e seguro que direto na img) */
+.container-galeria .item a:hover {
+    transform: scale(1.04); 
+    background-color: #ffc107; /* A moldura branca ganha o tom dourado/instrumento no hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); 
 }
 
 /* ==========================================================================
@@ -79,7 +78,7 @@ h3 {
 .rodape {
     margin-top: 60px;
     padding: 20px 0;
-    max-width: 1536px;
-    color: #fff;
+    width: 100%;
+    color: #ffffff;
     text-align: center;
 }
