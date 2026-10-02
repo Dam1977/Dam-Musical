@@ -1,84 +1,102 @@
+@charset "UTF-8";
+
 /* ==========================================================================
-   1. CONFIGURAÇÕES GERAIS DO BODY
+   1. CONFIGURAÇÕES DO CORPO (BODY)
    ========================================================================== */
 body {
     width: 100%;
-    min-height: 100vh; 
-    background-color: #1a1a1a; 
+    min-height: 100vh;
+    /* Gradiente idêntico ao da página principal para manter consistência */
+    background-image: linear-gradient(to top, rgb(0, 0, 0), rgb(2, 43, 68));
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    color: #ffffff;
 }
 
 /* ==========================================================================
-   2. HEADER E TEXTOS (Customização Segura de Fontes)
+   2. HEADER E BOTÃO DE NAVEGAÇÃO
    ========================================================================== */
-
-/* Ícone da Casinha (Home) */
-   .casinha a  {
-	margin-left: 20px;
-	margin-top: 30px;
-	color: #f0f8ff;
-	text-decoration: none;
+.casinha a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
 }
 
-/* CORREÇÃO: Removido as alturas fixas e flex globais para evitar sobreposição de textos */
-h1, h3, p {
-	font-family: 'Roboto', sans-serif;
-	color: #ffffff;
+.casinha a:hover {
+    background-color: #ff2978; /* Rosa Accent do seu projeto */
+    color: #ffffff;
+    transform: translateY(-2px);
 }
 
-h1 {
-	font-size: 2.5rem;
-    font-weight: 700;
+/* Customização do Banner Principal (Jumbotron) */
+.bgGradient {
+   
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+   
+    border-radius: 0 0 20px 20px;
+    margin-bottom: 2rem;
 }
 
-h3 {
-    font-size: 1.75rem;
+.bgGradient h1 {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    font-family: var(--font-main);
 }
 
-p {
-	font-size: 1rem;
+.bgGradient p.lead {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.15rem;
+    font-family: var(--font-main);
 }
-
 
 /* ==========================================================================
-   3. GALERIA E IMAGENS (Efeito Moldura de Foto Polaroid)
+   3. EFEITO MOLDURA POLAROID NAS FOTOS (FANCYBOX)
    ========================================================================== */
-.container-galeria .item a {
+.container-galeria .item a.fancybox {
     display: block;
+    background-color: #ffffff; /* Fundo do papel fotográfico */
+    /* Padding inferior maior para criar a base clássica da Polaroid */
+    padding: 10px 10px 30px 10px; 
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), background-color 0.3s, box-shadow 0.4s;
+    text-decoration: none;
+    position: relative;
     overflow: hidden;
-    border-radius: 6px;
-    background-color: #ffffff; /* Fundo branco que simula a base da foto */
-    padding: 8px; /* Cria o espaçamento interno para o efeito Polaroid */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* CORREÇÃO: Ajuste na tag img para trabalhar em harmonia com as proporções */
+/* Controle rígido das imagens para alinhar o Grid */
 .container-galeria .item img {
     width: 100%;
-    height: 250px; /* Mantém todas as fotos rigorosamente com a mesma altura */
-    object-fit: cover; /* Recorta e adapta sem achatar ou esticar a imagem */
-    border-radius: 3px;
-    display: block;
+    height: 240px; /* Obriga todas as fotos a terem rigorosamente o mesmo tamanho */
+    object-fit: cover; /* Recorta a imagem inteligentemente sem distorcer ou achatar */
+    border-radius: 4px;
+    transition: transform 0.4s ease;
 }
 
-/* Efeito Hover nos Contêineres das Fotos (Mais elegante e seguro que direto na img) */
-.container-galeria .item a:hover {
-    transform: scale(1.04); 
-    background-color: #ffc107; /* A moldura branca ganha o tom dourado/instrumento no hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); 
+/* Efeito de hover interativo nas fotos */
+.container-galeria .item a.fancybox:hover {
+    transform: translateY(-8px) rotate(1.5deg); /* Leve rotação simulando foto real em mesa */
+    background-color: #ffc107; /* O papel branco ganha tom dourado/instrumento */
+    box-shadow: 0 15px 30px rgba(255, 193, 7, 0.25);
 }
 
-/* ==========================================================================
-   4. RODAPÉ E UTILITÁRIOS
-   ========================================================================== */
-.rodape {
-    margin-top: 60px;
-    padding: 20px 0;
-    width: 100%;
-    color: #ffffff;
-    text-align: center;
+.container-galeria .item a.fancybox:hover img {
+    transform: scale(1.02); /* Sutil zoom na imagem interna */
+}
+
+/* Esconde as bordas do plugin quando ativo */
+.fancybox-content {
+    border-radius: 8px;
 }
