@@ -94,27 +94,28 @@
 
         <!-- Lembre-se de adicionar o seu arquivo JavaScript aqui antes do fechamento do body se tiver a função search() -->
          
-         <script>function search() {
+        <script>
+function search() {
     // 1. Pega o valor digitado no input e transforma em letras minúsculas
     let input = document.getElementById('searchbar').value.toLowerCase();
     
-    // 2. Pega todos os itens da lista (os links das cifras)
+    // 2. Pega todos os links das cifras
     let itens = document.getElementsByClassName('cifra');
     
     // 3. Passa por cada item para ver se o nome bate com a pesquisa
     for (let i = 0; i < itens.length; i++) {
         let cifra = itens[i];
+        // Pega o elemento 'li' pai do link para esconder a linha inteira
+        let paiLi = cifra.parentElement; 
         
-        // Verifica o texto de dentro do link do PDF
         if (cifra.innerHTML.toLowerCase().includes(input)) {
-            // Se encontrar, mostra a linha (<li>) que envolve o link
-            cifra.parentElement.style.display = "";
+            paiLi.style.display = ""; // Mostra o item
         } else {
-            // Se não encontrar, esconde a linha (<li>)
-            cifra.parentElement.style.display = "none";
+            paiLi.style.display = "none"; // Esconde o item
         }
     }
-}</script>
+}
+</script>
 </body>
 
 </html>
