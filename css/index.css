@@ -1,5 +1,5 @@
 /* ==========================================================================
-   IMPORTAÇÃO DO GOOGLE FONTS (Corrigida)
+   IMPORTAÇÃO DO GOOGLE FONTS (Agora Corrigida Oficialmente)
    ========================================================================== */
 @import url('https://googleapis.com');
 
@@ -7,10 +7,10 @@
 :root {
 	--font-main: 'Roboto', sans-serif;
 	--color-text: #ffffff;
-	--color-muted: rgba(255, 255, 255, 0.8); /* Hierarquia para textos secundários */
+	--color-muted: rgba(255, 255, 255, 0.8); 
 	--color-accent: #ff2978;
-	--bg-navbar: rgba(5, 12, 26, 0.75); /* Fundo sutilmente azulado combina mais */
-	--border-radius: 12px; /* Padrão moderno de arredondamento */
+	--bg-navbar: rgba(5, 12, 26, 0.75); 
+	--border-radius: 12px; 
 }
 
 /* RESET GLOBAL */
@@ -48,7 +48,7 @@ body {
 	background: var(--bg-navbar);
 	padding: 0 5%;
 	z-index: 1000;
-	backdrop-filter: blur(12px); /* Desfoque mais visível */
+	backdrop-filter: blur(12px); 
 	border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -113,7 +113,7 @@ body {
 	background: rgba(255, 255, 255, 0.03);
 	border-radius: var(--border-radius);
 	border: 1px solid rgba(255, 255, 255, 0.05);
-	overflow: hidden; /* Garante que a imagem siga o arredondamento */
+	overflow: hidden; 
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 	transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s;
 }
@@ -133,7 +133,6 @@ body {
 	color: var(--color-text);
 }
 
-/* Efeito de zoom sutil na foto ao passar o mouse */
 .galeria-cards:hover {
 	transform: translateY(-8px);
 	box-shadow: 0 15px 35px rgba(255, 41, 120, 0.2);
@@ -159,7 +158,6 @@ main h2 {
 	display: inline-block;
 }
 
-/* Linha decorativa abaixo do título principal */
 main h2::after {
 	content: '';
 	position: absolute;
@@ -168,7 +166,6 @@ main h2::after {
 	transform: translateX(-50%);
 	width: 60px;
 	height: 4px;
-	background: var(--color-accent);
 	border-radius: 2px;
 }
 
@@ -186,7 +183,7 @@ main h2::after {
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
 	width: 320px;
-	height: 440px; /* Definido altura fixa combinada com posições absolutas internas */
+	height: 460px; /* Aumentado levemente para comportar melhor os textos */
 	padding: 30px 25px;
 	border-radius: var(--border-radius);
 	cursor: pointer;
@@ -205,10 +202,11 @@ main h2::after {
 	height: 120px;
 	object-fit: cover;
 	border-radius: 50%;
-	border: 3px solid var(--color-accent); /* Borda combinando com a identidade do site */
+	border: 3px solid var(--color-accent); 
 	margin-bottom: 20px;
 	box-shadow: 0 0 15px rgba(255, 41, 120, 0.3);
 	transition: transform 0.4s ease;
+	z-index: 2; /* Garante que a foto fique sempre visível acima dos textos absolutos */
 }
 
 .card h3 {
@@ -223,26 +221,29 @@ main h2::after {
 	color: var(--color-muted);
 }
 
-/* Container interno para transições estáveis */
-.card-text, .texto-oculto {
+/* Containers internos de texto */
+.card-text {
 	width: 100%;
 	transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .texto-oculto {
 	position: absolute;
-	bottom: 30px;
+	/* Modificado para alinhar perfeitamente abaixo da imagem (120px foto + 20px margin + padding) */
+	top: 185px; 
 	left: 0;
+	width: 100%;
 	padding: 0 25px;
 	opacity: 0;
-	transform: translateY(15px);
+	transform: translateY(20px);
+	transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .texto-oculto p {
 	font-style: italic;
 }
 
-/* Estado de Hover Otimizado com Fade Eficiente */
+/* Estado de Hover */
 .card:hover {
 	background: linear-gradient(135deg, rgba(255, 41, 120, 0.15) 0%, rgba(24, 15, 74, 0.7) 100%);
 	border-color: rgba(255, 41, 120, 0.4);
@@ -255,20 +256,18 @@ main h2::after {
 
 .card:hover .card-text {
 	opacity: 0;
-	transform: translateY(-15px);
+	transform: translateY(-20px);
 	pointer-events: none;
 }
 
 .card:hover .texto-oculto {
-	position: relative;
-	bottom: auto;
 	opacity: 1;
 	transform: translateY(0);
 }
 
-/* Correção para o texto transparente não quebrar espaço */
+/* Corrigido: Removido display:none para não quebrar o fluxo de altura do card text */
 .transparente {
-	display: none; 
+	opacity: 0.9; 
 }
 
 /* RODAPÉ (FOOTER) */
@@ -287,10 +286,6 @@ footer {
 	justify-content: center;
 	margin-bottom: 2.5rem;
 	gap: 1.5rem;
-}
-
-.socials li {
-	margin: 0;
 }
 
 .socials a {
