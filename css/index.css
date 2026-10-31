@@ -271,12 +271,30 @@ main h2::after {
 }
 
 /* RODAPÉ (FOOTER) */
+
+#privacy {
+	color: #888888;          /* Cor cinza discreta */
+    text-decoration: none;   /* Remove o sublinhado padrão */
+    font-size: 0.85rem;      /* Tamanho da fonte levemente menor */
+    font-family: sans-serif; /* Mesma fonte do seu site */
+    transition: color 0.3s ease; /* Transição suave na cor ao passar o mouse */
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#privacy:hover {
+	 color: rgba(255, 255, 255, 0.5);     /* Muda para branco (ou a cor de destaque do seu site) */
+    text-decoration: underline; /* Adiciona o sublinhado ao passar o mouse */
+	
+}
+
 footer {
-	background: rgba(4, 9, 20, 0.9);
 	width: 100%;
 	padding: 50px 0 0 0;
 	margin-top: 8rem;
-	border-top: 1px solid rgba(255, 255, 255, 0.05);
+	
 }
 
 .socials {
@@ -315,11 +333,11 @@ footer {
 }
 
 .footer-bottom {
-	background: #02060f;
+	
 	width: 100%;
 	text-align: center;
 	padding: 25px 0;
-	border-top: 1px solid rgba(255, 255, 255, 0.02);
+	
 }
 
 .footer-bottom p {
