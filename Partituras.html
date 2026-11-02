@@ -23,7 +23,6 @@
     <!-- Ícones e Fontes -->
     <link rel="icon" href="img/colcheia.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <link href="https://googleapis.com" rel="stylesheet">
 
     <!-- Seus Estilos -->
     <link rel="stylesheet" href="css/Partituras.css">
@@ -414,38 +413,43 @@
         </div>
     </main>
 
-
+    <!-- JavaScript de Busca Dinâmica -->
     <script>
         function filtrarTabela() {
-            // Pega o que foi digitado e transforma em letras minúsculas
-            var input = document.getElementById("inputPesquisa");
-            var filter = input.value.toLowerCase();
+            const input = document.getElementById("inputPesquisa");
+            const filter = input.value.toLowerCase();
+            const tabela = document.getElementById("tabelaLouvores");
+            const linhas = tabela.getElementsByTagName("tbody")[0].getElementsByTagName("tr");
 
-            // Captura a tabela e todas as linhas do corpo (tbody)
-            var table = document.getElementById("tabelaLouvores") || document.querySelector(".table");
-            var tr = table.getElementsByTagName("tr");
+            for (let i = 0; i < linhas.length; i++) {
+                const colunas = linhas[i].getElementsByTagName("td");
+                if (colunas.length > 2) {
+                    const textoLouvor = colunas[1].textContent || colunas[1].innerText;
+                    const textoAutor = colunas[2].textContent || colunas[2].innerText;
 
-            // Varre todas as linhas da tabela (começa no 1 para pular o cabeçalho)
-            for (var i = 1; i < tr.length; i++) {
-                var tds = tr[i].getElementsByTagName("td");
-
-                // Garante que a linha possui colunas de dados
-                if (tds.length >= 2) {
-                    // No HTML, a tag <th> do número não conta como <td>, então:
-                    // tds[0] é o Louvor e tds[1] é o Autor
-                    var txtLouvor = (tds[0].textContent || tds[0].innerText).toLowerCase();
-                    var txtAutor = (tds[1].textContent || tds[1].innerText).toLowerCase();
-
-                    // Se o termo digitado estiver no Louvor OU no Autor, mostra a linha
-                    if (txtLouvor.indexOf(filter) > -1 || txtAutor.indexOf(filter) > -1) {
-                        tr[i].style.display = "";
+                    if (textoLouvor.toLowerCase().indexOf(filter) > -1 || textoAutor.toLowerCase().indexOf(filter) > -1) {
+                        linhas[i].style.display = "";
                     } else {
-                        tr[i].style.display = "none"; // Se não encontrar, esconde
+                        linhas[i].style.display = "none";
                     }
                 }
             }
         }
     </script>
+
+    <footer>
+               
+        <!-- Link flutuante do WhatsApp -->
+        <a id="whats" href="https://wa.me/5511951599886?text=A%20paz%20amigo(a),%20em%20que%20posso%20ajudar?" target="_blank" rel="noopener" aria-label="Fale conosco no WhatsApp">
+            <img src="img/whats.avif" alt="Logotipo do WhatsApp" title="Fale conosco no WhatsApp">
+        </a>
+
+        <a id="privacy" href="politicadeprivacidade.html">Política de Privacidade</a>
+
+        <div class="footer-bottom">
+            <p>Copyright © <abbr title="David Almeida Messias">Dam</abbr> Musical 2026. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
 </body>
 

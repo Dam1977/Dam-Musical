@@ -12,12 +12,23 @@ body {
     color: #ffffff;
 }
 
-/* Ícone da Casinha (Home) */
-   .casinha a i {
-	margin-left: 20px;
-	margin-top: 30px;
-	color: #f0f8ff;
-	text-decoration: none;
+/* Ícone da Casinha (Home) - AJUSTADO: fixed mantém o botão acessível ao rolar */
+.casinha {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.casinha a i {
+    font-size: 1.5rem;
+    color: #f0f8ff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.casinha a i:hover {
+    color: #38bdf8;
 }
 
 a {
@@ -60,11 +71,9 @@ td {
    ========================================== */
 
 /* Seção de Cabeçalho (Hero) */
-/* CORRIGIDO: Removido o seletor inválido '.display-4 fw-bold h1'. 
-   Se forem classes do Bootstrap juntas no H1, o correto é o formato abaixo: */
 h1.display-4.fw-bold {
-    font-size: 5rem;
-    font-weight: 200;
+    font-size: 3.5rem;
+    font-weight: 700;
     color: #ffffff;
     margin-bottom: 10px;
 }
@@ -132,7 +141,6 @@ h1.display-4.fw-bold {
     background: #0ea5e9;
 }
 
-
 /* ==========================================
    3. ESTILIZAÇÃO AVANÇADA DA TABELA E BOTÕES
    ========================================== */
@@ -171,6 +179,7 @@ h1.display-4.fw-bold {
     font-size: 0.85rem;
     font-weight: 600;
     transition: all 0.2s ease;
+    white-space: nowrap; /* Evita que o texto quebre em duas linhas */
 }
 
 .btn-baixar:hover {
@@ -190,6 +199,7 @@ h1.display-4.fw-bold {
     font-weight: 600;
     border: 1px solid #334155;
     transition: all 0.2s ease;
+    white-space: nowrap; /* Evita que o texto quebre em duas linhas */
 }
 
 .btn-instrumento:hover {
@@ -207,4 +217,50 @@ h1.display-4.fw-bold {
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.5px;
+}
+
+/* ==========================================
+   4. REGRAS DE RESPONSIVIDADE (Mobile & Tablet)
+   ========================================== */
+@media (max-width: 768px) {
+    h1.display-4.fw-bold {
+        font-size: 2.2rem; /* Reduz tamanho do título no mobile */
+    }
+    
+    .hero-section {
+        padding: 20px 10px;
+    }
+
+    .search-box-container {
+        max-width: 90%; /* Ocupa melhor a tela do celular */
+    }
+
+    /* INCLUÍDO: Oculta a 4ª coluna (Formato) em celulares automaticamente */
+    #tabelaLouvores th:nth-child(4),
+    #tabelaLouvores td:nth-child(4) {
+        display: none !important;
+    }
+
+    /* Ajustes finos nos paddings da tabela para caber em telas menores */
+    .table th, td {
+        padding: 10px 8px !important;
+        font-size: 0.9rem;
+    }
+
+    /* Melhora o comportamento dos botões em telas pequenas */
+    .btn-baixar, .btn-instrumento {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+        width: 100%; /* Faz o botão ocupar o espaço completo da célula se necessário */
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Força barras de rolagem horizontal na tabela sem quebrar o layout do site */
+    .table-responsive {
+        border-radius: 12px;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+    }
 }
