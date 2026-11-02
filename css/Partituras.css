@@ -1,42 +1,210 @@
+/* ==========================================
+   1. SEUS ESTILOS BASE (Preservados e Ajustados)
+   ========================================== */
 body {
-	
-	width: 100%;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
-}
-a {
-	text-decoration: none;
-}
-ul {
-	list-style: none;
-}
-img {
-	max-width: 100%;
-}
-table {
-	border-spacing: 2cm;
-}
-td {
-	text-align: left;
-	color: #ffffff;
-	padding: 3px;
-}
-.container {
-	width: 100%;
-	float: left;
-	text-align: center;
-	padding: 3% 4%;
-}
-.bgbackground {
-	background: rgba(0, 0, 0, 0.42);
+    width: 100%;
+    background-color: #0b0f19 !important; /* Fundo escuro moderno */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif !important;
+    color: #ffffff;
 }
 
-.casinha a i {
+/* Ícone da Casinha (Home) */
+   .casinha a i {
 	margin-left: 20px;
 	margin-top: 30px;
-	color: #ffffff;
+	color: #f0f8ff;
 	text-decoration: none;
 }
 
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Ajustado para não quebrar a tabela em telas menores */
+table {
+    border-collapse: collapse; 
+    width: 100%;
+}
+
+td {
+    text-align: left;
+    color: #ffffff;
+    padding: 12px 15px !important; /* Padding moderno em vez de spacing fixo */
+}
+
+.container {
+    width: 100%;
+    text-align: center;
+    padding: 3% 4%;
+}
+
+/* Sua classe de opacidade para legibilidade */
+.bgbackground {
+    background: rgba(0, 0, 0, 0.55);
+}
+
+/* ==========================================
+   2. NOVOS COMPONENTES (Identidade Visual e Busca)
+   ========================================== */
+
+/* Seção de Cabeçalho (Hero) */
+/* CORRIGIDO: Removido o seletor inválido '.display-4 fw-bold h1'. 
+   Se forem classes do Bootstrap juntas no H1, o correto é o formato abaixo: */
+h1.display-4.fw-bold {
+    font-size: 5rem;
+    font-weight: 200;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.hero-section h1 {
+    color: #ffffff;
+    font-weight: 300;
+    letter-spacing: -1px;
+}
+
+.subtitle-faith {
+    color: #ffffff;
+    font-style: normal;
+}
+
+.bg-info-custom {
+    background-color: rgba(56, 189, 248, 0.15) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+/* Caixa de Busca Dinâmica */
+.search-box-container {
+    display: flex;
+    max-width: 500px;
+    margin: 30px auto 0 auto;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 50px;
+    padding: 4px 6px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.search-box-container input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 8px 15px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+}
+
+.search-box-container input::placeholder {
+    color: #64748b;
+}
+
+.search-box-container button {
+    background: #38bdf8;
+    border: none;
+    color: #0b0f19;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.search-box-container button:hover {
+    background: #0ea5e9;
+}
+
+
+/* ==========================================
+   3. ESTILIZAÇÃO AVANÇADA DA TABELA E BOTÕES
+   ========================================== */
+.custom-table-container {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #1e293b;
+    background-color: #0f172a;
+}
+
+.table th {
+    background-color: #1e293b !important;
+    color: #94a3b8 !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    padding: 15px !important;
+    border-bottom: 2px solid #334155 !important;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(56, 189, 248, 0.04) !important;
+}
+
+.text-info-light {
+    color: #f1f5f9 !important;
+}
+
+/* Botão de Download Principal (Grades) */
+.btn-baixar {
+    display: inline-block;
+    background-color: #0284c7;
+    color: #ffffff;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-baixar:hover {
+    background-color: #0ea5e9;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(14, 165, 233, 0.4);
+}
+
+/* Botão de Download Alternativo (Instrumentos) */
+.btn-instrumento {
+    display: inline-block;
+    background-color: transparent;
+    color: #38bdf8;
+    padding: 5px 14px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid #334155;
+    transition: all 0.2s ease;
+}
+
+.btn-instrumento:hover {
+    background-color: rgba(56, 189, 248, 0.08);
+    border-color: #38bdf8;
+    color: #38bdf8;
+}
+
+/* Distintivo de Formato (.ENC) */
+.badge-format {
+    background-color: #334155;
+    color: #94a3b8;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
