@@ -1,0 +1,478 @@
+/* =========================================
+   1. CONFIGURAÇÕES GERAIS E CORES
+   ========================================= */
+:root {
+    --cor-primaria: #0f172a;      /* Azul Marinho Profundo (Elegância) */
+    --cor-secundaria: #1e293b;    /* Azul Acinzentado Escuro */
+    --cor-destaque: #d97706;      /* Dourado / Âmbar (Atenção) */
+    --cor-destaque-hover: #b45309;
+    --cor-whatsapp: #25d366;      /* Verde Oficial WhatsApp */
+    --cor-whatsapp-hover: #1ebe57;
+    --cor-fundo-claro: #f8fafc;   /* Cinza muito claro para respiro visual */
+    --cor-branco: #ffffff;
+    --cor-texto: #334155;
+    --cor-texto-suave: #64748b;
+    --sombra-suave: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+    --borda-arredondada: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--cor-fundo-claro);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* =========================================
+   2. CABEÇALHO (TOPO)
+   ========================================= */
+.header {
+    background-color: var(--cor-branco);
+    padding: 18px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--cor-primaria);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--cor-destaque);
+}
+
+.btn-header {
+    background-color: var(--cor-whatsapp);
+    color: var(--cor-branco);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-header:hover {
+    background-color: var(--cor-whatsapp-hover);
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   3. PRIMEIRA DOBRA (HERO SECTION)
+   ========================================= */
+.hero {
+    background: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-secundaria) 100%);
+    color: var(--cor-branco);
+    padding: 90px 0;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.badge {
+    display: inline-block;
+    background-color: rgba(217, 119, 6, 0.2);
+    color: #fbbf24;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+.hero h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background-color: var(--cor-destaque);
+    color: var(--cor-branco);
+    text-decoration: none;
+    padding: 15px 32px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--cor-destaque-hover);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--cor-branco);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 15px 32px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--cor-branco);
+}
+
+/* =========================================
+   4. SEÇÃO DE MATERIAIS (CARDS)
+   ========================================= */
+.materials {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 2rem;
+    color: var(--cor-primaria);
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: var(--cor-texto-suave);
+    font-size: 1.05rem;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    align-items: stretch;
+}
+
+.card {
+    background-color: var(--cor-branco);
+    padding: 35px 30px;
+    border-radius: var(--borda-arredondada);
+    box-shadow: var(--sombra-suave);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    transition: 0.3s;
+    border: 1px solid #e2e8f0;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card.featured {
+    border: 2px solid var(--cor-destaque);
+    transform: scale(1.03);
+}
+
+.card.featured:hover {
+    transform: scale(1.03) translateY(-5px);
+}
+
+.tag {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--cor-destaque);
+    color: var(--cor-branco);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 14px;
+    border-radius: 50px;
+    text-transform: uppercase;
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    color: var(--cor-primaria);
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: var(--cor-texto-suave);
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+}
+
+.btn-card {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid var(--cor-primaria);
+    background-color: transparent;
+    color: var(--cor-primaria);
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-card:hover {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+}
+
+.btn-card.primary {
+    background-color: var(--cor-destaque);
+    border-color: var(--cor-destaque);
+    color: var(--cor-branco);
+}
+
+.btn-card.primary:hover {
+    background-color: var(--cor-destaque-hover);
+    border-color: var(--cor-destaque-hover);
+}
+
+/* =========================================
+   5. SEÇÃO FAMÍLIA E AUTORIDADE
+   ========================================= */
+.family {
+    background-color: var(--cor-branco);
+    padding: 80px 0;
+    border-top: 1px solid #e2e8f0;
+}
+
+.author-box {
+    background-color: var(--cor-fundo-claro);
+    border-radius: var(--borda-arredondada);
+    padding: 35px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    border-left: 5px solid var(--cor-destaque);
+}
+
+.avatar-placeholder {
+    width: 90px;
+    height: 90px;
+    min-width: 90px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.author-info h3 {
+    color: var(--cor-primaria);
+    font-size: 1.4rem;
+}
+
+.author-info .role {
+    display: block;
+    color: var(--cor-destaque);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+.author-info blockquote {
+    font-style: italic;
+    color: var(--cor-texto);
+    font-size: 0.95rem;
+}
+
+.family-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.family-card {
+    background-color: var(--cor-fundo-claro);
+    padding: 25px;
+    border-radius: var(--borda-arredondada);
+    text-align: center;
+    border: 1px solid #e2e8f0;
+}
+
+.avatar-small {
+    width: 60px;
+    height: 60px;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-branco);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    margin: 0 auto 15px auto;
+}
+
+.family-card h4 {
+    color: var(--cor-primaria);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.family-card p {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--cor-texto-suave);
+    margin-bottom: 10px;
+}
+
+.family-card span {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--cor-destaque);
+}
+
+/* =========================================
+   6. CHAMADA FINAL (CTA) E RODAPÉ
+   ========================================= */
+.cta-final {
+    background: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-secundaria) 100%);
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 70px 0;
+}
+
+.cta-final h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.cta-final p {
+    color: #cbd5e1;
+    margin-bottom: 30px;
+    font-size: 1.05rem;
+}
+
+.btn-whatsapp-large {
+    background-color: var(--cor-whatsapp);
+    color: var(--cor-branco);
+    border: none;
+    padding: 16px 36px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+    transition: 0.3s;
+}
+
+.btn-whatsapp-large:hover {
+    background-color: var(--cor-whatsapp-hover);
+    transform: translateY(-3px);
+}
+
+.footer {
+    background-color: #090d16;
+    color: #94a3b8;
+    padding: 25px 0;
+    font-size: 0.85rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer a {
+    color: #94a3b8;
+    text-decoration: underline;
+}
+
+.footer a:hover {
+    color: var(--cor-branco);
+}
+
+/* =========================================
+   7. BOTÃO FLUTUANTE WHATSAPP
+   ========================================= */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--cor-whatsapp);
+    color: var(--cor-branco);
+    border: none;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    z-index: 999;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: var(--cor-whatsapp-hover);
+}
+
+/* =========================================
+   8. RESPONSIVIDADE (CELULARES)
+   ========================================= */

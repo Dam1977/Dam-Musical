@@ -1,164 +1,551 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dam Musical | Respire Música</title>
+    <!-- Conectando o arquivo de estilos CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Fonte moderna do Google Fonts (Poppins) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Site com conteúdo musical gratuito: partituras, cifras, apostilas e tutoriais.">
-    <meta name="keywords" content="Dam Musical, Partituras, Cifras, Apostila, Tutorial, Bíblia Online">
-    <meta name="author" content="David Messias">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2969572419687710"
-     crossorigin="anonymous"></script>
-     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2969572419687710"
-     crossorigin="anonymous"></script>
-    <link rel="icon" href="img/colcheia.png" />
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/responsivo.css">
-    <!-- Font Awesome 4.7.0 -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="js/index.js" defer></script>
-    <title>Dam Musical</title>
-</head>
-
-<body>
-
-    <!-- CONTEÚDO REFERENTE À PROPOSTA DO SITE -->
-    <header>
-        <nav class="navbar">
-            <div class="brand-title">Respire Música</div>
-            <a href="#" class="toggle-button" aria-label="Abrir menu de navegação">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </a>
-            <div class="navbar-links">
-                <ul>
-                    <!-- Corrigido: Removida a barra inicial para evitar quebra de link local -->
-                    <li><a href="Cifras.html">Cifra</a></li>
-                    <li><a href="Biblia.html">Bíblia Online</a></li>
-                    <li><a href="Mapas.html">Google Maps</a></li>
-                    <li><a href="Galeria.html">Galeria de Fotos</a></li>
-                    <li><a href="Tutorial.html">Tutoriais</a></li>
-                </ul>
-            </div>
-        </nav>
+  <body>
+    <!-- 1. TOPO / CABEÇALHO (Sem distrações) -->
+    <header class="header">
+      <div class="container header-content">
+        <a href="#" class="logo">Dam <span>Musical</span></a>
+        <button
+          class="btn-header"
+          onclick="
+            abrirWhatsApp(
+              'Olá David! Vim pelo site e gostaria de mais informações.',
+            )
+          "
+        >
+          Falar no WhatsApp
+        </button>
+      </div>
     </header>
 
-    <section class="proposta-site">
-        <!-- Opcional: Adicionado h2 visualmente oculto para fins de SEO e Acessibilidade se desejar estruturar perfeitamente -->
-        <div class="galeria-container">
-            <a href="Partituras.html" class="galeria-cards">
-                <img src="img/Partitura.avif" alt="Pastas e folhas de Partituras musicais" />
-                <h3>Partituras</h3>
-            </a>
-
-            <a href="Apostila.html" class="galeria-cards">
-                <img src="img/Apostila3.avif" alt="Capa da Apostila em formato PDF" />
-                <h3>Apostila PDF</h3>
-            </a>
-
-            <a href="Diversos.html" class="galeria-cards">
-                <img src="img/Dam2.avif" alt="Conteúdos diversos do Dam Musical" />
-                <h3>Diversos</h3>
-            </a>
+    <!-- 2. PRIMEIRA DOBRA (Hero Section) -->
+    <section class="hero">
+      <div class="container hero-content">
+        <span class="badge">Respire Música</span>
+        <h1>
+          Aprenda a tocar suas músicas favoritas com um método simples e direto
+        </h1>
+        <p>
+          Acesse partituras organizadas, apostilas completas em PDF e conteúdos
+          exclusivos preparados para acelerar a sua evolução musical.
+        </p>
+        <div class="hero-buttons">
+          <a href="Apostila/apostila.pdf" target="_blank" class="btn-primary"
+            >Abrir Apostila PDF</a
+          >
+          <button
+            class="btn-secondary"
+            onclick="
+              abrirWhatsApp(
+                'Olá David! Quero saber mais sobre a Apostila em PDF.',
+              )
+            "
+          >
+            Falar sobre a Apostila
+          </button>
         </div>
+      </div>
     </section>
-    <!-- TÉRMINO DO CONTEÚDO REFERENTE À PROPOSTA DO SITE -->
 
-    <!-- CONTEÚDO PARTICULAR -->
-    <main class="conteudo-particular">
-        <h2>Família projeto de DEUS</h2>
-        <div class="familia">
-            
-            <div class="card">
-                <img src="img/Dam1.avif" alt="Foto de David Messias">
-                <div class="card-text">
-                    <h3>David Messias</h3>
-                    <p class="transparente"></p>
-                </div>
-                <div class="texto-oculto">
-                    <h3>Efésios 5:28</h3>
-                    <p>Da mesma forma, os maridos devem amar as suas mulheres como a seus próprios corpos. Quem ama sua mulher, ama a si mesmo.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="img/Amor.avif" alt="Foto de Alyne Bandeira">
-                <div class="card-text">
-                    <h3>Alyne Bandeira</h3>
-                    <p class="transparente"></p>
-                </div>
-                <div class="texto-oculto">
-                    <h3>Provébios 18:22</h3>
-                    <p>Quem encontra uma esposa encontra algo excelente; recebeu uma bênção do Senhor.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="img/Gaby.avif" alt="Foto de Gaby Messias">
-                <div class="card-text">
-                    <h3>Gaby Messias</h3>
-                    <p class="transparente"></p>
-                </div>
-                <div class="texto-oculto">
-                    <h3>Salmos 127:3-5</h3>
-                    <p>Os filhos são herança do Senhor, uma recompensa que ele dá. Como flechas nas mãos do guerreiro são os filhos nascidos na juventude. Como é feliz o homem que tem a sua aljava cheia deles! Não será humilhado quando enfrentar seus inimigos nos tribunais.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <!-- Sugestão: Alterado de Fê.avif para fe.avif para evitar problemas de codificação no servidor -->
-                <img src="img/fe2.avif" alt="Foto de Felipe Messias">
-                <div class="card-text">
-                    <h3>Felipe Messias</h3>
-                    <p class="transparente"></p>
-                </div>
-                <div class="texto-oculto">
-                    <h3>Efésios 6:1-3</h3>
-                    <p>Filhos, obedeçam a seus pais no Senhor, pois isso é justo. "Honra teu pai e tua mãe" - este é o primeiro mandamento com promessa - "para que tudo te corra bem e tenhas longa vida sobre a terra".</p>
-                </div>
-            </div>
-
-            <div id="sophia" class="card">
-                <img src="img/Sophia.avif" alt="Foto de Sophia Bandeira">
-                <div class="card-text">
-                    <h3>Sophia Bandeira</h3>
-                    <p class="transparente"></p>
-                </div>
-                <div class="texto-oculto">
-                    <h3>1 Samuel 1:27-28</h3>
-                    <p>Era este menino que eu pedia, e o SENHOR concedeu-me o pedido. Por isso, agora, eu o dedico ao SENHOR. Por toda a sua vida será dedicado ao SENHOR”. E ali adorou o SENHOR.</p>
-                </div>
-            </div>
-
+    <!-- 3. SEÇÃO DE MATERIAIS / BENEFÍCIOS -->
+    <section id="materiais" class="materials">
+      <div class="container">
+        <div class="section-title">
+          <h2>O que você encontra no Dam Musical</h2>
+          <p>Recursos práticos para estudar no seu ritmo, onde estiver.</p>
         </div>
-    </main>
-    <!-- TÉRMINO DO CONTEÚDO PARTICULAR -->
 
-    <footer>
-        <div>
-            <ul class="socials">
-                <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="https://twitter.com/home" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="https://www.instagram.com/invites/contact/?i=ikkfhspnqkcl&utm_content=9uw6p1" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa fa-instagram"></i></a></li>
-                <li><a href="https://www.youtube.com/@davidalmeidamessias3684" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa fa-youtube"></i></a></li>
-                <li><a href="https://github.com/Dam1977" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa fa-github"></i></a></li>
-            </ul>
+        <div class="cards-grid">
+          <!-- Card 1: Partituras -->
+          <div class="card">
+            <div class="card-icon">🎼</div>
+            <h3>Partituras</h3>
+            <p>
+              Pastas e folhas de partituras musicais organizadas e prontas para
+              download e estudo.
+            </p>
+            <button class="btn-card" onclick="abrirModalPartituras()">
+              Acessar Partituras
+            </button>
+          </div>
+
+          <!-- Card 2: Apostila PDF (Destaque) -->
+          <div class="card featured">
+            <div class="tag">Mais Procurado</div>
+            <div class="card-icon">📘</div>
+            <h3>Apostila PDF</h3>
+            <p>
+              Material didático completo em formato PDF com teoria aplicada,
+              exercícios e repertório selecionado.
+            </p>
+            <a
+              href="Apostila/apostila.pdf"
+              target="_blank"
+              class="btn-card primary"
+              style="text-decoration: none; display: block"
+            >
+              Abrir Apostila PDF
+            </a>
+          </div>
+
+          <!-- Card 3: Cifras -->
+          <div class="card">
+            <div class="card-icon">🎸</div>
+            <h3>Cifras</h3>
+            <p>
+              Cifras da Harpa Cristã e louvores organizados em PDF para
+              facilitar seu acompanhamento.
+            </p>
+            <button class="btn-card" onclick="abrirModalCifras()">
+              Acessar Cifras
+            </button>
+          </div>
         </div>
-        
-        <!-- Link flutuante do WhatsApp -->
-        <a id="whats" href="https://wa.me/5511951599886?text=A%20paz%20amigo(a),%20em%20que%20posso%20ajudar?" target="_blank" rel="noopener" aria-label="Fale conosco no WhatsApp">
-            <img src="img/whats.avif" alt="Logotipo do WhatsApp" title="Fale conosco no WhatsApp">
-        </a>
+      </div>
+    </section>
 
-        <a id="privacy" href="politicadeprivacidade.html">Política de Privacidade</a>
-
-        <div class="footer-bottom">
-            <p>Copyright © <abbr title="David Almeida Messias">Dam</abbr> Musical 2026. Todos os direitos reservados.</p>
+    <!-- 4. AUTORIDADE E PROPÓSITO (Família Projeto de Deus) -->
+    <section class="family">
+      <div class="container">
+        <div class="section-title">
+          <h2>Família: Projeto de DEUS</h2>
+          <p>A música e a fé caminhando juntas em nosso propósito de vida.</p>
         </div>
+
+        <!-- Apresentação do Professor/Músico -->
+        <div class="author-box">
+          <div class="avatar-placeholder">DM</div>
+          <div class="author-info">
+            <h3>David Messias</h3>
+            <span class="role">Idealizador do Dam Musical</span>
+            <blockquote>
+              "Da mesma forma, os maridos devem amar as suas mulheres como a
+              seus próprios corpos. Quem ama sua mulher, ama a si mesmo." —
+              <strong>Efésios 5:28</strong>
+            </blockquote>
+          </div>
+        </div>
+
+        <!-- Grade da Família -->
+        <div class="family-grid">
+          <!-- Alyne -->
+          <div class="family-card">
+            <div class="avatar-small">AB</div>
+            <h4>Alyne Bandeira</h4>
+            <p>
+              "Quem encontra uma esposa encontra algo excelente; recebeu uma
+              bênção do Senhor."
+            </p>
+            <span>Provérbios 18:22</span>
+          </div>
+
+          <!-- Gaby -->
+          <div class="family-card">
+            <div class="avatar-small">GM</div>
+            <h4>Gaby Messias</h4>
+            <p>
+              "Os filhos são herança do Senhor, uma recompensa que ele dá. Como
+              flechas nas mãos do guerreiro são os filhos nascidos na
+              juventude..."
+            </p>
+            <span>Salmos 127:3-5</span>
+          </div>
+
+          <!-- Felipe -->
+          <div class="family-card">
+            <div class="avatar-small">FM</div>
+            <h4>Felipe Messias</h4>
+            <p>
+              "Filhos, obedeçam a seus pais no Senhor, pois isso é justo. 'Honra
+              teu pai e tua mãe'..."
+            </p>
+            <span>Efésios 6:1-3</span>
+          </div>
+
+          <!-- Sophia -->
+          <div class="family-card">
+            <div class="avatar-small">SB</div>
+            <h4>Sophia Bandeira</h4>
+            <p>
+              "Era este menino que eu pedia, e o SENHOR concedeu-me o pedido.
+              Por isso, agora, eu o dedico ao SENHOR..."
+            </p>
+            <span>1 Samuel 1:27-28</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. CHAMADA FINAL (CTA) -->
+    <section class="cta-final">
+      <div class="container">
+        <h2>Pronto para dar o próximo passo na música?</h2>
+        <p>
+          Tire suas dúvidas diretamente comigo pelo WhatsApp e comece hoje
+          mesmo.
+        </p>
+        <button
+          class="btn-whatsapp-large"
+          onclick="
+            abrirWhatsApp(
+              'Olá David! Estava no site Dam Musical e quero conversar sobre os materiais.',
+            )
+          "
+        >
+          Conversar no WhatsApp Agora
+        </button>
+      </div>
+    </section>
+
+    <!-- 6. RODAPÉ -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <p>Copyright © Dam Musical 2026. Todos os direitos reservados.</p>
+        <a href="#" onclick="mostrarPrivacidade(event)"
+          >Política de Privacidade</a
+        >
+      </div>
     </footer>
 
-</body>
+    <!-- JANELA DE PARTITURAS (MODAL) COM FILTRO ENCORE E MUSESCORE -->
+<div id="modalPartituras" class="modal" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(15, 23, 42, 0.8); align-items: center; justify-content: center; padding: 20px;">
+    <div class="modal-content" style="background-color: #ffffff; padding: 35px 30px; border-radius: 12px; width: 100%; max-width: 550px; position: relative; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);">
+        <span class="close-modal" onclick="fecharModalPartituras()" style="position: absolute; top: 15px; right: 20px; font-size: 2rem; font-weight: bold; color: #64748b; cursor: pointer;">&times;</span>
+        <h2>🎼 Partituras Disponíveis</h2>
+        <p style="margin-bottom: 15px;">Selecione o formato (Encore ou MuseScore) ou busque pelo nome:</p>
 
+        <!-- BOTÕES DE FORMATO (ABAS) -->
+        <div style="display: flex; gap: 8px; margin-bottom: 15px; flex-wrap: wrap;">
+            <button type="button" id="btnFmtTodas" onclick="mudarFormatoPartitura('todas')" style="padding: 8px 14px; border-radius: 6px; border: none; font-weight: 600; font-size: 0.85rem; cursor: pointer; background-color: #0f172a; color: #ffffff;">
+                Todas
+            </button>
+            <button type="button" id="btnFmtEncore" onclick="mudarFormatoPartitura('encore')" style="padding: 8px 14px; border-radius: 6px; border: 1px solid #cbd5e1; font-weight: 600; font-size: 0.85rem; cursor: pointer; background-color: #f8fafc; color: #334155;">
+                Encore (.enc)
+            </button>
+            <button type="button" id="btnFmtMusescore" onclick="mudarFormatoPartitura('musescore')" style="padding: 8px 14px; border-radius: 6px; border: 1px solid #cbd5e1; font-weight: 600; font-size: 0.85rem; cursor: pointer; background-color: #f8fafc; color: #334155;">
+                MuseScore (.mscz)
+            </button>
+        </div>
+
+        <!-- CAMPO DE BUSCA INSTANTÂNEA -->
+        <input type="text" id="campoBuscaPartitura" onkeyup="filtrarPartituras()" placeholder="🔍 Digite o nome da partitura..." style="width: 100%; padding: 12px 15px; border: 2px solid #cbd5e1; border-radius: 8px; font-size: 0.95rem; margin-bottom: 15px; outline: none;">
+        
+        <!-- LISTA DE PARTITURAS -->
+        <ul id="listaPartituras" class="lista-partituras" style="list-style: none; max-height: 260px; overflow-y: auto;">
+            
+            <!-- ARQUIVOS ENCORE (data-formato="encore") -->
+            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
+                <span>🎵 <strong>[Encore]</strong> A Resposta - Grade</span>
+                <a href="Partitura/arquivo.enc/A Resposta - Grade.enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
+            </li>
+
+            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
+                <span>🎵 <strong>[Encore]</strong> A Vitória da Cruz - Grade</span>
+                <a href="Partitura/arquivo.enc/A Vitória da Cruz - Grade.enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
+            </li>
+
+            <!-- EXEMPLO ARQUIVO MUSESCORE (data-formato="musescore") -->
+            <li data-formato="musescore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
+                <span>🎼 <strong>[MuseScore]</strong> Bondade de Deus Cello</span>
+                <a href="Partitura/partitura.mscz/Bondade de Deus Cello.mscz" download style="background-color: #0f172a; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .mscz</a>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+
+    <!-- JANELA DE CIFRAS (MODAL) COM CATEGORIAS E BUSCA -->
+<div id="modalCifras" class="modal" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(15, 23, 42, 0.8); align-items: center; justify-content: center; padding: 20px;">
+    <div class="modal-content" style="background-color: #ffffff; padding: 35px 30px; border-radius: 12px; width: 100%; max-width: 550px; position: relative; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);">
+        <span class="close-modal" onclick="fecharModalCifras()" style="position: absolute; top: 15px; right: 20px; font-size: 2rem; font-weight: bold; color: #64748b; cursor: pointer;">&times;</span>
+        <h2>🎸 Cifras Disponíveis</h2>
+        <p style="margin-bottom: 15px;">Escolha uma categoria ou digite para buscar:</p>
+
+        <!-- BOTÕES DE CATEGORIA (ABAS) -->
+        <div style="display: flex; gap: 8px; margin-bottom: 15px; flex-wrap: wrap;">
+            <button type="button" id="btnCatTodas" onclick="mudarCategoriaCifra('todas')" style="padding: 8px 14px; border-radius: 6px; border: none; font-weight: 600; font-size: 0.85rem; cursor: pointer; background-color: #0f172a; color: #ffffff;">
+                Todas
+            </button>
+            <button type="button" id="btnCatHarpa" onclick="mudarCategoriaCifra('harpa')" style="padding: 8px 14px; border-radius: 6px; border: 1px solid #cbd5e1; font-weight: 600; font-size: 0.85rem; cursor: pointer; background-color: #f8fafc; color: #334155;">
+                Harpa Cristã
+            </button>
+            <button type="button" id="btnCatAvulsos" onclick="mudarCategoriaCifra('avulsos')" style="padding: 8px 14px; border-radius: 6px; border: 1px solid #cbd5e1; font-weight: 600; font-size: 0.85rem; cursor: pointer; background-color: #f8fafc; color: #334155;">
+                Louvores Avulsos
+            </button>
+        </div>
+        
+        <!-- CAMPO DE BUSCA INSTANTÂNEA -->
+        <input type="text" id="campoBuscaCifra" onkeyup="filtrarCifras()" placeholder="🔍 Digite o número ou nome do louvor..." style="width: 100%; padding: 12px 15px; border: 2px solid #cbd5e1; border-radius: 8px; font-size: 0.95rem; margin-bottom: 15px; outline: none;">
+
+        <!-- LISTA DE CIFRAS -->
+        <ul id="listaCifras" class="lista-partituras" style="list-style: none; max-height: 260px; overflow-y: auto;">
+            
+            <!-- EXEMPLO HARPA CRISTÃ (data-categoria="harpa") -->
+            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
+                <span>🎵 <strong>[Harpa]</strong> 001 - Chuvas de Graça</span>
+                <a href="Cifra/Harpa Cristã/001.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
+            </li>
+
+            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
+                <span>🎵 <strong>[Harpa]</strong> 010 - Eu Te Louvo</span>
+                <a href="Cifra/Harpa Cristã/010.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
+            </li>
+
+            <!-- EXEMPLO LOUVORES AVULSOS (data-categoria="avulsos") -->
+            <li data-categoria="avulsos" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
+                <span>🎶 <strong>[Avulso]</strong> Único - Fernandinho</span>
+                <a href="Cifra/Louvores Avulsos/unico.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
+            </li>
+
+            <li data-categoria="avulsos" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
+                <span>🎶 <strong>[Avulso]</strong> Que Ele Cresça - Deigma Marques</span>
+                <a href="Cifra/Louvores Avulsos/que-ele-cresca.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+
+
+
+    <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
+    <button
+      class="whatsapp-float"
+      title="Fale conosco no WhatsApp"
+      onclick="abrirWhatsApp('Olá! Vim pelo site Dam Musical.')"
+    >
+      💬
+    </button>
+
+    <!-- JANELA DE CIFRAS (MODAL) -->
+    <div
+      id="modalCifras"
+      class="modal"
+      style="
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(15, 23, 42, 0.8);
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      "
+    >
+      <div
+        class="modal-content"
+        style="
+          background-color: #ffffff;
+          padding: 35px 30px;
+          border-radius: 12px;
+          width: 100%;
+          max-width: 550px;
+          position: relative;
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        "
+      >
+        <span
+          class="close-modal"
+          onclick="fecharModalCifras()"
+          style="
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #64748b;
+            cursor: pointer;
+          "
+          >&times;</span
+        >
+        <h2>🎸 Cifras Disponíveis</h2>
+        <p>Clique no hino desejado para abrir o PDF:</p>
+
+        <ul class="lista-partituras">
+          <li>
+            <span>🎵 Harpa Cristã - Hino 010</span>
+            <a
+              href="Cifra/Harpa Cristã/010.pdf"
+              target="_blank"
+              class="btn-download"
+              >Abrir PDF</a
+            >
+          </li>
+          <!-- Copie e cole mais <li> aqui conforme adicionar novos hinos -->
+        </ul>
+      </div>
+    </div>
+
+       <script>
+     function abrirWhatsApp(mensagem) {
+  const textoCodificado = encodeURIComponent(mensagem);
+
+  // Troque 5511951599886 direto pelo seu número abaixo:
+  const url = "https://wa.me/5511951599886?" + textoCodificado;
+
+  window.open(url, "_blank", "noopener,noreferrer");
+}
+
+
+
+
+
+
+
+
+
+        function mostrarPrivacidade(event) {
+            event.preventDefault();
+            alert("Política de Privacidade - Dam Musical: Respeitamos a sua privacidade. Este site redireciona diretamente para o WhatsApp sem coletar dados.");
+        }
+
+                let formatoAtualPartitura = "todas";
+
+        function abrirModalPartituras() {
+            document.getElementById("modalPartituras").style.display = "flex";
+            const input = document.getElementById("campoBuscaPartitura");
+            if (input) input.value = "";
+            mudarFormatoPartitura("todas");
+        }
+
+        function fecharModalPartituras() {
+            document.getElementById("modalPartituras").style.display = "none";
+        }
+
+        function mudarFormatoPartitura(formato) {
+            formatoAtualPartitura = formato;
+
+            const botoes = {
+                todas: document.getElementById("btnFmtTodas"),
+                encore: document.getElementById("btnFmtEncore"),
+                musescore: document.getElementById("btnFmtMusescore")
+            };
+
+            for (let chave in botoes) {
+                if (chave === formato) {
+                    botoes[chave].style.backgroundColor = "#0f172a";
+                    botoes[chave].style.color = "#ffffff";
+                    botoes[chave].style.border = "none";
+                } else {
+                    botoes[chave].style.backgroundColor = "#f8fafc";
+                    botoes[chave].style.color = "#334155";
+                    botoes[chave].style.border = "1px solid #cbd5e1";
+                }
+            }
+
+            filtrarPartituras();
+        }
+
+        function filtrarPartituras() {
+            const termo = document.getElementById("campoBuscaPartitura").value
+                .toLowerCase()
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "");
+
+            const itens = document.querySelectorAll("#listaPartituras li");
+
+            itens.forEach(function(item) {
+                const fmtItem = item.getAttribute("data-formato");
+                const textoMusica = item.querySelector("span").textContent
+                    .toLowerCase()
+                    .normalize("NFD")
+                    .replace(/[\u0300-\u036f]/g, "");
+
+                const bateFormato = (formatoAtualPartitura === "todas" || fmtItem === formatoAtualPartitura);
+                const bateTexto = textoMusica.includes(termo);
+
+                if (bateFormato && bateTexto) {
+                    item.style.display = "flex";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        }
+
+
+               let categoriaAtualCifra = "todas";
+
+        function abrirModalCifras() {
+            document.getElementById("modalCifras").style.display = "flex";
+            const input = document.getElementById("campoBuscaCifra");
+            if (input) input.value = "";
+            mudarCategoriaCifra("todas");
+        }
+
+        function fecharModalCifras() {
+            document.getElementById("modalCifras").style.display = "none";
+        }
+
+        function mudarCategoriaCifra(categoria) {
+            categoriaAtualCifra = categoria;
+
+            // Atualiza a cor dos botões das abas
+            const botoes = {
+                todas: document.getElementById("btnCatTodas"),
+                harpa: document.getElementById("btnCatHarpa"),
+                avulsos: document.getElementById("btnCatAvulsos")
+            };
+
+            for (let chave in botoes) {
+                if (chave === categoria) {
+                    botoes[chave].style.backgroundColor = "#0f172a";
+                    botoes[chave].style.color = "#ffffff";
+                    botoes[chave].style.border = "none";
+                } else {
+                    botoes[chave].style.backgroundColor = "#f8fafc";
+                    botoes[chave].style.color = "#334155";
+                    botoes[chave].style.border = "1px solid #cbd5e1";
+                }
+            }
+
+            filtrarCifras();
+        }
+
+        function filtrarCifras() {
+            const termo = document.getElementById("campoBuscaCifra").value
+                .toLowerCase()
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "");
+
+            const itens = document.querySelectorAll("#listaCifras li");
+
+            itens.forEach(function(item) {
+                const catItem = item.getAttribute("data-categoria");
+                const textoHino = item.querySelector("span").textContent
+                    .toLowerCase()
+                    .normalize("NFD")
+                    .replace(/[\u0300-\u036f]/g, "");
+
+                const bateCategoria = (categoriaAtualCifra === "todas" || catItem === categoriaAtualCifra);
+                const bateTexto = textoHino.includes(termo);
+
+                if (bateCategoria && bateTexto) {
+                    item.style.display = "flex";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        }
+
+
+    </script>
+</body>
+</html>
+
+  </body>
 </html>
