@@ -12,21 +12,26 @@
 
   <body>
     <!-- 1. TOPO / CABEÇALHO (Sem distrações) -->
-    <header class="header">
+            <header class="header">
       <div class="container header-content">
-        <a href="#" class="logo">Dam <span>Musical</span></a>
-        <button
-          class="btn-header"
-          onclick="
-            abrirWhatsApp(
-              'Olá David! Vim pelo site e gostaria de mais informações.',
-            )
-          "
-        >
-          Falar no WhatsApp
-        </button>
+        <a href="index.html" class="logo">Dam <span>Musical</span></a>
+        <nav style="display: flex; gap: 15px; align-items: center;">
+          <a href="dicas.html" style="text-decoration: none; color: inherit; font-weight: 600;">Dicas e Aulas</a>
+          <a href="sobre.html" style="text-decoration: none; color: inherit; font-weight: 600;">Sobre</a>
+          <button
+            class="btn-header"
+            onclick="
+              abrirWhatsApp(
+                'Olá David! Vim pelo site e gostaria de mais informações.',
+              )
+            "
+          >
+            Falar no WhatsApp
+          </button>
+        </nav>
       </div>
     </header>
+
 
     <!-- 2. PRIMEIRA DOBRA (Hero Section) -->
     <section class="hero">
@@ -40,9 +45,12 @@
           exclusivos preparados para acelerar a sua evolução musical.
         </p>
         <div class="hero-buttons">
-          <a href="Apostila/apostila.pdf" target="_blank" class="btn-primary"
-            >Abrir Apostila PDF</a
-          >
+          <a href="Apostila/apostila.pdf" target="_blank" class="btn-primary">Abrir Apostila PDF</a>
+
+
+
+            
+          
           <button
             class="btn-secondary"
             onclick="
@@ -208,14 +216,18 @@
     </section>
 
     <!-- 6. RODAPÉ -->
-    <footer class="footer">
+       <footer class="footer">
       <div class="container footer-content">
         <p>Copyright © Dam Musical 2026. Todos os direitos reservados.</p>
-        <a href="#" onclick="mostrarPrivacidade(event)"
-          >Política de Privacidade</a
-        >
+        <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+          <a href="sobre.html">Sobre Nós</a>
+          <a href="contato.html">Contato</a>
+          <a href="privacidade.html">Política de Privacidade</a>
+          <a href="termos.html">Termos de Uso</a>
+        </div>
       </div>
     </footer>
+
 
     <!-- JANELA DE PARTITURAS (MODAL) COM FILTRO ENCORE E MUSESCORE -->
 <div id="modalPartituras" class="modal" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(15, 23, 42, 0.8); align-items: center; justify-content: center; padding: 20px;">
