@@ -13,6 +13,7 @@
         <a href="index.html" class="logo">Dam <span>Musical</span></a>
         <nav style="display: flex; gap: 15px; align-items: center;">
           <a href="index.html" style="text-decoration: none; color: inherit; font-weight: 600;">Início</a>
+          <a href="dicas.html" style="text-decoration: none; color: inherit; font-weight: 600;">Dicas e Aulas</a>
           <a href="sobre.html" style="text-decoration: none; color: inherit; font-weight: 600;">Sobre</a>
           <a href="contato.html" style="text-decoration: none; color: inherit; font-weight: 600;">Contato</a>
         </nav>
@@ -25,10 +26,10 @@
         Tem alguma dúvida sobre as apostilas, sugestões de partituras ou deseja enviar uma mensagem para a equipe do <strong>Dam Musical</strong>? Preencha o formulário abaixo ou utilize nossos canais diretos.
       </p>
 
-      <!-- Formulário usando FormSubmit (gratuito e sem precisar de servidor) -->
-      <!-- ⚠️ Troque SEU-davgabfe@gmail.com.com pelo seu e-mail real abaixo -->
-            <form name="contato-dam-musical" method="POST" data-netlify="true" style="margin-top: 25px; display: flex; flex-direction: column; gap: 15px;">
-        <input type="hidden" name="form-name" value="contato-dam-musical" />
+      <form id="formContato" style="margin-top: 25px; display: flex; flex-direction: column; gap: 15px;">
+        <input type="hidden" name="access_key" value="3278a9a9-825f-4879-a9dd-4e61d0b9ac4d" />
+        <input type="hidden" name="subject" value="Nova mensagem do site Dam Musical" />
+        <input type="hidden" name="from_name" value="Dam Musical" />
 
         <div>
           <label for="nome" style="display: block; font-weight: 600; margin-bottom: 5px;">Seu Nome:</label>
@@ -42,7 +43,7 @@
 
         <div>
           <label for="assunto" style="display: block; font-weight: 600; margin-bottom: 5px;">Assunto:</label>
-          <input type="text" id="assunto" name="subject" required placeholder="Ex: Dúvida sobre a Apostila PDF" style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px;" />
+          <input type="text" id="assunto" name="assunto" required placeholder="Ex: Dúvida sobre a Apostila PDF" style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px;" />
         </div>
 
         <div>
@@ -50,13 +51,18 @@
           <textarea id="mensagem" name="message" rows="5" required placeholder="Escreva sua mensagem aqui..." style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px;"></textarea>
         </div>
 
-        <button type="submit" class="btn-primary" style="border: none; cursor: pointer; font-size: 1rem;">Enviar Mensagem</button>
-      </form>
+        <button type="submit" id="btnEnviar" class="btn-primary" style="border: none; cursor: pointer; font-size: 1rem;">
+          Enviar Mensagem
+        </button>
 
+        <!-- Aviso de confirmação na própria página -->
+        <div id="statusEnvio" style="display: none; padding: 15px; border-radius: 8px; font-weight: 600; text-align: center;"></div>
+      </form>
 
       <div style="margin-top: 40px; padding: 20px; background: #f8fafc; border-radius: 10px; border: 1px solid #e2e8f0;">
         <h3>Outros Canais de Atendimento</h3>
-        <p style="margin-top: 8px;"><strong>WhatsApp Direto:</strong> Atendimento rápido para dúvidas sobre materiais de estudo.</p>
+        <p style="margin-top: 8px;"><strong>E-mail Direto:</strong> davgabfe@gmail.com</p>
+        <p><strong>WhatsApp Direto:</strong> Atendimento rápido para dúvidas sobre materiais de estudo.</p>
         <p><strong>Tempo médio de resposta:</strong> Até 24 horas úteis.</p>
       </div>
     </main>
@@ -66,6 +72,7 @@
         <p>Copyright © Dam Musical 2026. Todos os direitos reservados.</p>
         <div style="display: flex; gap: 15px; flex-wrap: wrap;">
           <a href="index.html">Início</a>
+          <a href="dicas.html">Dicas e Aulas</a>
           <a href="sobre.html">Sobre Nós</a>
           <a href="contato.html">Contato</a>
           <a href="privacidade.html">Política de Privacidade</a>
@@ -73,5 +80,46 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      const form = document.getElementById("formContato");
+      const btnEnviar = document.getElementById("btnEnviar");
+      const statusEnvio = document.getElementById("statusEnvio");
+
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+        btnEnviar.disabled = true;
+        btnEnviar.textContent = "Enviando...";
+        statusEnvio.style.display = "none";
+
+        const dados = new FormData(form);
+
+        try {
+          const resposta = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: dados
+          });
+          const resultado = await resposta.json();
+
+          if (resultado.success) {
+            statusEnvio.style.display = "block";
+            statusEnvio.style.backgroundColor = "#dcfce7";
+            statusEnvio.style.color = "#166534";
+            statusEnvio.textContent = "✅ Mensagem enviada com sucesso! Em breve entraremos em contato.";
+            form.reset();
+          } else {
+            throw new Error("Falha no envio");
+          }
+        } catch (erro) {
+          statusEnvio.style.display = "block";
+          statusEnvio.style.backgroundColor = "#fee2e2";
+          statusEnvio.style.color = "#991b1b";
+          statusEnvio.textContent = "❌ Não foi possível enviar agora. Tente novamente ou chame no WhatsApp.";
+        } finally {
+          btnEnviar.disabled = false;
+          btnEnviar.textContent = "Enviar Mensagem";
+        }
+      });
+    </script>
   </body>
 </html>
