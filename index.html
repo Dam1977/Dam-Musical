@@ -4,37 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dam Musical | Respire Música</title>
-    <!-- Conectando o arquivo de estilos CSS -->
     <link rel="stylesheet" href="style.css" />
-    <!-- Fonte moderna do Google Fonts (Poppins) -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <!-- COLE AQUI O CÓDIGO COMPLETO DO GOOGLE ADSENSE -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2969572419687710"
-     crossorigin="anonymous"></script>
+    <link href="https://googleapis.com" rel="stylesheet" />
+    <script async src="https://googlesyndication.com" crossorigin="anonymous"></script>
   </head>
 
   <body>
-    <!-- 1. TOPO / CABEÇALHO (Sem distrações) -->
-            <header class="header">
+    <!-- 1. TOPO / CABEÇALHO -->
+    <header class="header">
       <div class="container header-content">
         <a href="index.html" class="logo">Dam <span>Musical</span></a>
-        <nav style="display: flex; gap: 15px; align-items: center;">
-          <a href="dicas.html" style="text-decoration: none; color: inherit; font-weight: 600;">Dicas e Aulas</a>
-          <a href="sobre.html" style="text-decoration: none; color: inherit; font-weight: 600;">Sobre</a>
+        <nav>
+          <a href="dicas.html">Dicas e Aulas</a>
+          <a href="sobre.html">Sobre</a>
           <button
             class="btn-header"
-            onclick="
-              abrirWhatsApp(
-                'Olá David! Vim pelo site e gostaria de mais informações.',
-              )
-            "
+            onclick="abrirWhatsApp('Olá David! Vim pelo site e gostaria de mais informações.')"
           >
             Falar no WhatsApp
           </button>
         </nav>
       </div>
     </header>
-
 
     <!-- 2. PRIMEIRA DOBRA (Hero Section) -->
     <section class="hero">
@@ -49,18 +40,9 @@
         </p>
         <div class="hero-buttons">
           <a href="Apostila/apostila.pdf" target="_blank" class="btn-primary">Abrir Apostila PDF</a>
-
-
-
-            
-          
           <button
             class="btn-secondary"
-            onclick="
-              abrirWhatsApp(
-                'Olá David! Quero saber mais sobre a Apostila em PDF.',
-              )
-            "
+            onclick="abrirWhatsApp('Olá David! Quero saber mais sobre a Apostila em PDF.')"
           >
             Falar sobre a Apostila
           </button>
@@ -99,12 +81,7 @@
               Material didático completo em formato PDF com teoria aplicada,
               exercícios e repertório selecionado.
             </p>
-            <a
-              href="Apostila/apostila.pdf"
-              target="_blank"
-              class="btn-card primary"
-              style="text-decoration: none; display: block"
-            >
+            <a href="Apostila/apostila.pdf" target="_blank" class="btn-card primary">
               Abrir Apostila PDF
             </a>
           </div>
@@ -149,7 +126,6 @@
 
         <!-- Grade da Família -->
         <div class="family-grid">
-          <!-- Alyne -->
           <div class="family-card">
             <div class="avatar-small">AB</div>
             <h4>Alyne Bandeira</h4>
@@ -160,7 +136,6 @@
             <span>Provérbios 18:22</span>
           </div>
 
-          <!-- Gaby -->
           <div class="family-card">
             <div class="avatar-small">GM</div>
             <h4>Gaby Messias</h4>
@@ -172,7 +147,6 @@
             <span>Salmos 127:3-5</span>
           </div>
 
-          <!-- Felipe -->
           <div class="family-card">
             <div class="avatar-small">FM</div>
             <h4>Felipe Messias</h4>
@@ -183,7 +157,6 @@
             <span>Efésios 6:1-3</span>
           </div>
 
-          <!-- Sophia -->
           <div class="family-card">
             <div class="avatar-small">SB</div>
             <h4>Sophia Bandeira</h4>
@@ -207,11 +180,7 @@
         </p>
         <button
           class="btn-whatsapp-large"
-          onclick="
-            abrirWhatsApp(
-              'Olá David! Estava no site Dam Musical e quero conversar sobre os materiais.',
-            )
-          "
+          onclick="abrirWhatsApp('Olá David! Estava no site Dam Musical e quero conversar sobre os materiais.')"
         >
           Conversar no WhatsApp Agora
         </button>
@@ -219,10 +188,10 @@
     </section>
 
     <!-- 6. RODAPÉ -->
-       <footer class="footer">
+    <footer class="footer">
       <div class="container footer-content">
         <p>Copyright © Dam Musical 2026. Todos os direitos reservados.</p>
-        <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+        <div class="footer-links">
           <a href="sobre.html">Sobre Nós</a>
           <a href="contato.html">Contato</a>
           <a href="privacidade.html">Política de Privacidade</a>
@@ -231,582 +200,69 @@
       </div>
     </footer>
 
-
-    <!-- JANELA DE PARTITURAS (MODAL) COM FILTRO ENCORE E MUSESCORE -->
-<div id="modalPartituras" class="modal" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(15, 23, 42, 0.8); align-items: center; justify-content: center; padding: 20px;">
-    <div class="modal-content" style="background-color: #ffffff; padding: 35px 30px; border-radius: 12px; width: 100%; max-width: 550px; position: relative; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);">
-        <span class="close-modal" onclick="fecharModalPartituras()" style="position: absolute; top: 15px; right: 20px; font-size: 2rem; font-weight: bold; color: #64748b; cursor: pointer;">&times;</span>
+    <!-- JANELA DE PARTITURAS (MODAL) -->
+    <div id="modalPartituras" class="modal">
+      <div class="modal-content">
+        <span class="close-modal" onclick="fecharModalPartituras()">&times;</span>
         <h2>🎼 Partituras Disponíveis</h2>
-        <p style="margin-bottom: 15px;">Selecione o formato (Encore ou MuseScore) ou busque pelo nome:</p>
+        <p class="modal-subtitle">Selecione o formato (Encore ou MuseScore) ou busque pelo nome:</p>
 
-        <!-- BOTÕES DE FORMATO (ABAS) -->
-        <div style="display: flex; gap: 8px; margin-bottom: 15px; flex-wrap: wrap;">
-            <button type="button" id="btnFmtTodas" onclick="mudarFormatoPartitura('todas')" style="padding: 8px 14px; border-radius: 6px; border: none; font-weight: 600; font-size: 0.85rem; cursor: pointer; background-color: #0f172a; color: #ffffff;">
-                Todas
-            </button>
-            <button type="button" id="btnFmtEncore" onclick="mudarFormatoPartitura('encore')" style="padding: 8px 14px; border-radius: 6px; border: 1px solid #cbd5e1; font-weight: 600; font-size: 0.85rem; cursor: pointer; background-color: #f8fafc; color: #334155;">
-                Encore (.enc)
-            </button>
-            <button type="button" id="btnFmtMusescore" onclick="mudarFormatoPartitura('musescore')" style="padding: 8px 14px; border-radius: 6px; border: 1px solid #cbd5e1; font-weight: 600; font-size: 0.85rem; cursor: pointer; background-color: #f8fafc; color: #334155;">
-                MuseScore (.mscz)
-            </button>
+        <div class="modal-tabs">
+          <button type="button" id="btnFmtTodas" class="tab-btn active" onclick="mudarFormatoPartitura('todas')">
+            Todas
+          </button>
+          <button type="button" id="btnFmtEncore" class="tab-btn" onclick="mudarFormatoPartitura('encore')">
+            Encore (.enc)
+          </button>
+          <button type="button" id="btnFmtMusescore" class="tab-btn" onclick="mudarFormatoPartitura('musescore')">
+            MuseScore (.mscz)
+          </button>
         </div>
 
-        <!-- CAMPO DE BUSCA INSTANTÂNEA -->
-        <input type="text" id="campoBuscaPartitura" onkeyup="filtrarPartituras()" placeholder="🔍 Digite o nome da partitura..." style="width: 100%; padding: 12px 15px; border: 2px solid #cbd5e1; border-radius: 8px; font-size: 0.95rem; margin-bottom: 15px; outline: none;">
-        
-        <!-- LISTA DE PARTITURAS -->
-        <ul id="listaPartituras" class="lista-partituras" style="list-style: none; max-height: 260px; overflow-y: auto;">
-            
-            <!-- ARQUIVOS ENCORE (data-formato="encore") -->
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 A Resposta <strong>[Grade]</strong></span>
-                <a href="Partitura/arquivo.enc/A Resposta - Grade.enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
+        <input
+          type="text"
+          id="campoBuscaPartitura"
+          class="modal-search"
+          onkeyup="filtrarPartituras()"
+          placeholder="🔍 Digite o nome da partitura..."
+        />
 
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 A Vitória da Cruz <strong>[Grade]</strong></span>
-                <a href="Partitura/arquivo.enc/A Vitória da Cruz - Grade.enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 Alerta <strong>[Grade]</strong></span>
-                <a href="Partitura/arquivo.enc/Alerta.enc - Grade.enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 Anthem Of Praise <strong>[Grade]</strong></span>
-                <a href="Partitura/arquivo.enc/Anthem Of Praise - GRADE.enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 Atrai-Me <strong>[Grade]</strong></span>
-                <a href="Partitura/arquivo.enc/Atrai-Me - Grade.enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 Até Que O Senhor Venha <strong>[Grade]</strong></span>
-                <a href="Partitura/arquivo.enc/Até Que O Senhor Venha - Grade.enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 Autor da minha fé <strong>[Grade]</strong></span>
-                <a href="Partitura/arquivo.enc/Autor da minha fé - Grade .enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 Cadeias Quebrar <strong>[Grade]</strong></span>
-                <a href="Partitura/arquivo.enc/" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 Caminho No Deserto <strong>[Grade]</strong></span>
-                <a href="Partitura/arquivo.enc/Caminho No Deserto - Grade.enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 Canta Meu Povo <strong>[Clarinete]</strong></span>
-                <a href="Partitura/arquivo.enc/Canta Meu Povo - Clarinete.enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 Canta Meu Povo <strong>[Sax-Alto]</strong></span>
-                <a href="Partitura/arquivo.enc/Canta Meu Povo - Sax Alto.enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 Canta Meu Povo <strong>[Trombone]</strong></span>
-                <a href="Partitura/arquivo.enc/Canta Meu Povo - Trombone.enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 Canta Meu Povo <strong>[Trompete]</strong></span>
-                <a href="Partitura/arquivo.enc/Canta Meu Povo - Trompete.enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 Ele Exaltado <strong>[Grade]</strong></span>
-                <a href="Partitura/arquivo.enc/Ele Exaltado - Grade.enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 Ele Vem <strong>[Grade]</strong></span>
-                <a href="Partitura/arquivo.enc/Ele Vem - Grade.enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 Em Teus Átrios <strong>[Grade]</strong></span>
-                <a href="Partitura/arquivo.enc/Em Teus Átrios - Grade.enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 Eu Me Rendo <strong>[Cello]</strong></span>
-                <a href="Partitura/arquivo.enc/Eu Me Rendo - Cello.enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 Eu Me Rendo <strong>[Violino]</strong></span>
-                <a href="Partitura/arquivo.enc/Eu Me Rendo - Violino.enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 É a Presença <strong>[Grade]</strong></span>
-                <a href="Partitura/arquivo.enc/É a Presença Grade.enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 Every Praise <strong>[Grade]</strong></span>
-                <a href="Partitura/arquivo.enc/" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 Fez Um Caminho Pra Mim <strong>[Grade]</strong></span>
-                <a href="Partitura/arquivo.enc/Fez Um Caminho Pra Mim - Grade.enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 Fonte do Que Clama <strong>[Grade]</strong></span>
-                <a href="Partitura/arquivo.enc/Fonte do Que Clama - Grade.enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 Grande Eu Sou <strong>[Grade]</strong></span>
-                <a href="Partitura/arquivo.enc/Grande Eu Sou - Grade.enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 Jerusalém <strong>[Grade]</strong></span>
-                <a href="Partitura/arquivo.enc/Jerusalém - Grade.enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 Leva-Me Além <strong>[Grade]</strong></span>
-                <a href="Partitura/arquivo.enc/Leva-Me Além - Grade.enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 Louve ao Senhor <strong>[Grade]</strong></span>
-                <a href="Partitura/arquivo.enc/Louve ao Senhor - Grade.enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 Meu Deus É Incrível <strong>[Grade]</strong></span>
-                <a href="Partitura/arquivo.enc/Meu Deus É Incrível - Grade.enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 Meu Novo Lar <strong>[Grade]</strong></span>
-                <a href="Partitura/arquivo.enc/Meu Novo Lar - Grade.enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 Na Força Do Louvor <strong>[Grade]</strong></span>
-                <a href="Partitura/arquivo.enc/Na Força Do Louvor.enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 Não Vou Desistir <strong>[Grade]</strong></span>
-                <a href="Partitura/arquivo.enc/Não Vou Desistir.enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 Palavras <strong>[Grade]</strong></span>
-                <a href="Partitura/arquivo.enc/Palavras - Grade.enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 Pra Sempre <strong>[Grade]</strong></span>
-                <a href="Partitura/arquivo.enc/Pra Sempre - Grade.enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 Restitui <strong>[Grade]</strong></span>
-                <a href="Partitura/arquivo.enc/Restitui - Grade.enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 Senhor dos Exercitos Rei <strong>[Grade]</strong></span>
-                <a href="Partitura/arquivo.enc/Senhor dos Exercitos Rei - Grade.enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 Sua Presença é Tudo Pra Mim <strong>[Grade]</strong></span>
-                <a href="Partitura/arquivo.enc/Sua Presença é Tudo Pra Mim - Grade.enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 Tua Glória Está Aqui <strong>[Grade]</strong></span>
-                <a href="Partitura/arquivo.enc/Tua Glória Está Aqui.enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 Tua Graça Me Basta <strong>[Piano]</strong></span>
-                <a href="Partitura/arquivo.enc/Tua graça me basta - Base.enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 Vem Cantar Louvores <strong>[Grade]</strong></span>
-                <a href="Partitura/arquivo.enc/Vem Cantar Louvores - Grade.enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 Venho Te Louvar <strong>[Grade]</strong></span>
-                <a href="Partitura/arquivo.enc/Venho Te Louvar.enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
-            <li data-formato="encore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎵 Visão do Céu <strong>[Grade]</strong></span>
-                <a href="Partitura/arquivo.enc/Visão do Céu.enc" download style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .enc</a>
-            </li>
-
-
-            <!-- EXEMPLO ARQUIVO MUSESCORE (data-formato="musescore") -->
-            <li data-formato="musescore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎼 Bondade de Deus <strong>[Cello]</strong></span>
-                <a href="Partitura/partitura.mscz/Bondade de Deus Cello.mscz" download style="background-color: #0f172a; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .mscz</a>
-            </li>
-            <li data-formato="musescore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎼 Bondade de Deus <strong>[Clarinete]</strong></span>
-                <a href="Partitura/partitura.mscz/Bondade de Deus Clarinete.mscz" download style="background-color: #0f172a; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .mscz</a>
-            </li>
-            <li data-formato="musescore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎼 Bondade de Deus <strong>[Sax-Alto]</strong></span>
-                <a href="Partitura/partitura.mscz/Bondade de Deus Sax-Alto.mscz" download style="background-color: #0f172a; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .mscz</a>
-            </li>
-            <li data-formato="musescore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎼 Bondade de Deus <strong>[Viola]</strong></span>
-                <a href="Partitura/partitura.mscz/Bondade de Deus Viola.mscz" download style="background-color: #0f172a; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .mscz</a>
-            </li>
-            <li data-formato="musescore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎼 Bondade de Deus <strong>[Clarinete]</strong></span>
-                <a href="Partitura/partitura.mscz/Bondade de Deus Clarinete.mscz" download style="background-color: #0f172a; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .mscz</a>
-            </li>
-            <li data-formato="musescore" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0; gap: 10px;">
-                <span>🎼 Bondade de Deus <strong>[Clarinete]</strong></span>
-                <a href="Partitura/partitura.mscz/Bondade de Deus Violino.mscz" download style="background-color: #0f172a; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Baixar .mscz</a>
-            </li>
-        </ul>
+        <!-- Preenchido automaticamente pelo script.js usando o dados.js -->
+        <ul id="listaPartituras" class="lista-arquivos"></ul>
+      </div>
     </div>
-</div>
 
-
-    <!-- JANELA DE CIFRAS (MODAL) COM CATEGORIAS E BUSCA -->
-<div id="modalCifras" class="modal" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(15, 23, 42, 0.8); align-items: center; justify-content: center; padding: 20px;">
-    <div class="modal-content" style="background-color: #ffffff; padding: 35px 30px; border-radius: 12px; width: 100%; max-width: 550px; position: relative; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);">
-        <span class="close-modal" onclick="fecharModalCifras()" style="position: absolute; top: 15px; right: 20px; font-size: 2rem; font-weight: bold; color: #64748b; cursor: pointer;">&times;</span>
+    <!-- JANELA DE CIFRAS (MODAL) -->
+    <div id="modalCifras" class="modal">
+      <div class="modal-content">
+        <span class="close-modal" onclick="fecharModalCifras()">&times;</span>
         <h2>🎸 Cifras Disponíveis</h2>
-        <p style="margin-bottom: 15px;">Escolha uma categoria ou digite para buscar:</p>
+        <p class="modal-subtitle">Escolha uma categoria ou digite para buscar:</p>
 
-        <!-- BOTÕES DE CATEGORIA (ABAS) -->
-        <div style="display: flex; gap: 8px; margin-bottom: 15px; flex-wrap: wrap;">
-            <button type="button" id="btnCatTodas" onclick="mudarCategoriaCifra('todas')" style="padding: 8px 14px; border-radius: 6px; border: none; font-weight: 600; font-size: 0.85rem; cursor: pointer; background-color: #0f172a; color: #ffffff;">
-                Todas
-            </button>
-            <button type="button" id="btnCatHarpa" onclick="mudarCategoriaCifra('harpa')" style="padding: 8px 14px; border-radius: 6px; border: 1px solid #cbd5e1; font-weight: 600; font-size: 0.85rem; cursor: pointer; background-color: #f8fafc; color: #334155;">
-                Harpa Cristã
-            </button>
-            <button type="button" id="btnCatAvulsos" onclick="mudarCategoriaCifra('avulsos')" style="padding: 8px 14px; border-radius: 6px; border: 1px solid #cbd5e1; font-weight: 600; font-size: 0.85rem; cursor: pointer; background-color: #f8fafc; color: #334155;">
-                Louvores Avulsos
-            </button>
+        <div class="modal-tabs">
+          <button type="button" id="btnCatTodas" class="tab-btn active" onclick="mudarCategoriaCifra('todas')">
+            Todas
+          </button>
+          <button type="button" id="btnCatHarpa" class="tab-btn" onclick="mudarCategoriaCifra('harpa')">
+            Harpa Cristã
+          </button>
+          <button type="button" id="btnCatAvulsos" class="tab-btn" onclick="mudarCategoriaCifra('avulsos')">
+            Louvores Avulsos
+          </button>
         </div>
-        
-        <!-- CAMPO DE BUSCA INSTANTÂNEA -->
-        <input type="text" id="campoBuscaCifra" onkeyup="filtrarCifras()" placeholder="🔍 Digite o número ou nome do louvor..." style="width: 100%; padding: 12px 15px; border: 2px solid #cbd5e1; border-radius: 8px; font-size: 0.95rem; margin-bottom: 15px; outline: none;">
 
-        <!-- LISTA DE CIFRAS -->
-        <ul id="listaCifras" class="lista-partituras" style="list-style: none; max-height: 260px; overflow-y: auto;">
-            
-           <!-- EXEMPLO HARPA CRISTÃ (data-categoria="harpa") -->
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 001 - Eu Te Louvo</span>
-                <a href="Cifra/Harpa Cristã/010.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 012 - Vem Já Pecador</span>
-                <a href="Cifra/Harpa Cristã/012.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 015 - Conversão</span>
-                <a href="Cifra/Harpa Cristã/015.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 016 - Despertar Para o Trabalho</span>
-                <a href="Cifra/Harpa Cristã/016.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 025 - Jesus Tu És BomJesus</span>
-                <a href="Cifra/Harpa Cristã/025.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 036 - O Exilado</span>
-                <a href="Cifra/Harpa Cristã/036.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 039 - Alvo Mais Que A Neve</span>
-                <a href="Cifra/Harpa Cristã/039.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 051 - Adoração Reconhecida</span>
-                <a href="Cifra/Harpa Cristã/051.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 056 - Tudo em Cristo</span>
-                <a href="Cifra/Harpa Cristã/056.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 061 - Deus Tomará Conta de Ti</span>
-                <a href="Cifra/Harpa Cristã/061.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 073 - Vem Vem a Mim</span>
-                <a href="Cifra/Harpa Cristã/073.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 075 - Em Jesus Tens a Palma da Vitória</span>
-                <a href="Cifra/Harpa Cristã/075.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 076 - Vem ó Pródigo</span>
-                <a href="Cifra/Harpa Cristã/076.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 077 - Guarda o Contacto</span>
-                <a href="Cifra/Harpa Cristã/077.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 100 - O Bom Consolador</span>
-                <a href="Cifra/Harpa Cristã/100.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 107 - Firmes nas Promessas</span>
-                <a href="Cifra/Harpa Cristã/107.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
+        <input
+          type="text"
+          id="campoBuscaCifra"
+          class="modal-search"
+          onkeyup="filtrarCifras()"
+          placeholder="🔍 Digite o número ou nome do louvor..."
+        />
 
-                        <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 122 - Fogo Divino</span>
-                <a href="Cifra/Harpa Cristã/122.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 124 - Adoração</span>
-                <a href="Cifra/Harpa Cristã/124.PDF" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 166 - Deixa Entrar o Rei da Glória</span>
-                <a href="Cifra/Harpa Cristã/166.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 171 - Um Pecador Remido</span>
-                <a href="Cifra/Harpa Cristã/171.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 200 - O Bondoso Amigo</span>
-                <a href="Cifra/Harpa Cristã/200.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 224 - É o Tempo de Segar</span>
-                <a href="Cifra/Harpa Cristã/224.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 258 - Na Rocha Eterna Firmada</span>
-                <a href="Cifra/Harpa Cristã/258.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 300 - Nossa Esperança</span>
-                <a href="Cifra/Harpa Cristã/300.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 301 - Vem Cear</span>
-                <a href="Cifra/Harpa Cristã/301.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 303 - Precisamos de Jesus</span>
-                <a href="Cifra/Harpa Cristã/303.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 328 - O Pão da Vida</span>
-                <a href="Cifra/Harpa Cristã/328.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 382 - Olhando para o Carvalho</span>
-                <a href="Cifra/Harpa Cristã/382.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 400 - Em Jesus</span>
-                <a href="Cifra/Harpa Cristã/400.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 401 - Jesus Voltará</span>
-                <a href="Cifra/Harpa Cristã/401.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 413 - Meu Pastor</span>
-                <a href="Cifra/Harpa Cristã/413.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 430 - Evangelho da Salvação</span>
-                <a href="Cifra/Harpa Cristã/430.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-
-                        <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 432 - Consagração ao Senhor</span>
-                <a href="Cifra/Harpa Cristã/432.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 434 - A Teus Pés</span>
-                <a href="Cifra/Harpa Cristã/434.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 467 - Sobre as Ondas do Mar</span>
-                <a href="Cifra/Harpa Cristã/467.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 482 - Comunhão</span>
-                <a href="Cifra/Harpa Cristã/482.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 491 - Há Poder no Sangue de Jesus</span>
-                <a href="Cifra/Harpa Cristã/491.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 525 - Vencendo Vem Jesus</span>
-                <a href="Cifra/Harpa Cristã/525.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 535 - Tú és fiel Senhor</span>
-                <a href="Cifra/Harpa Cristã/535.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 545 - Porque Ele Vive</span>
-                <a href="Cifra/Harpa Cristã/545.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 577 - Em Fervente Oração</span>
-                <a href="Cifra/Harpa Cristã/577.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="harpa" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎵 578 - Sossegai</span>
-                <a href="Cifra/Harpa Cristã/578.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-
-                    
-
-            <!-- EXEMPLO LOUVORES AVULSOS (data-categoria="avulsos") -->
-                        <li data-categoria="avulsos" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎶 Attos2 Worship - Medley Pentecostal</span>
-                <a href="Cifra/Louvores/Attos2 Worship - Medley Pentecostal.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="avulsos" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎶 Até Que o Senhor Venha - Ministério Zoe</span>
-                <a href="Cifra/Louvores/Até Que o Senhor Venha - Ministério Zoe.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="avulsos" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎶 Canta Meu Povo - Jair Pires</span>
-                <a href="Cifra/Louvores/Canta Meu Povo - Jair Pires.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="avulsos" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎶 Cicatrizes - Vanessa Carvalho</span>
-                <a href="Cifra/Louvores/Cicatrizes - Vanessa Carvalho.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="avulsos" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎶 Com Coração - Corinho</span>
-                <a href="Cifra/Louvores/Com Coração.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="avulsos" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎶 Contigo Está - Coral Resgate</span>
-                <a href="Cifra/Louvores/Contigo Está - Coral Resgate.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="avulsos" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎶 Esperança - Julia Vitória</span>
-                <a href="Cifra/Louvores/Esperança - Julia Vitória - .pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="avulsos" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎶 Marcas da Dor - Samuel Mariano</span>
-                <a href="Cifra/Louvores/Marcas da Dor - Samuel Mariano.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="avulsos" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎶 Medley Derrama Fogo - AD Vila Tietê</span>
-                <a href="Cifra/Louvores/Medley Derrama Fogo - AD Vila Tietê.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="avulsos" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎶 Medley Escudo, Planos de Deus, Sou Um Milagre</span>
-                <a href="Cifra/Louvores/Medley Escudo, Planos de Deus, Sou Um Milagre.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="avulsos" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎶 Medley João 20, Pra Sempre, Pq Ele Vive</span>
-                <a href="Cifra/Louvores/Medley João 20, Pra Sempre, Pq Ele Vive.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="avulsos" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎶 Medley Oxigênio, Ainda Tem Vida Ai, Jesus Venceu</span>
-                <a href="Cifra/Louvores/Medley Oxigênio + Ainda Tem Vida Ai + Jesus Venceu .pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="avulsos" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎶 Medley Vento do Espírito - Chegou o Avivamento - Amigo Espírito Santo - Adolescentes Kids</span>
-                <a href="Cifra/Louvores/Medley Vento do Espírito - Chegou o Avivamento - Amigo Espírito Santo - Adolescentes Kids.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="avulsos" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎶 Medley Vinho e Pão, Vem Cear - Fernanda Brum</span>
-                <a href="Cifra/Louvores/Medley Vinho e Pão, Vem Cear - Fernanda Brum.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="avulsos" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎶 Medley Viverão, Ezequiel, Eu Navegarei - Grande Coral</span>
-                <a href="Cifra/Louvores/Medley Viverão, Ezequiel, Eu Navegarei - Grande Coral.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-
-                        <li data-categoria="avulsos" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎶 Medley Volta Logo Jesus-Irei Eu Pra Linda Cidade-Imagine-João Viu-Onde Está Aquele</span>
-                <a href="Cifra/Louvores/Medley Volta Logo Jesus-Irei Eu Pra Linda Cidade-Imagine-João Viu-Onde Está Aquele.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="avulsos" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎶 Medley É Adorar</span>
-                <a href="Cifra/Louvores/Medley É Adorar.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="avulsos" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎶 Meu Pai - Unaspinho</span>
-                <a href="Cifra/Louvores/Meu Pai - Unaspinho.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="avulsos" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎶 Não Conseguirei Sozinho - Samuel Tayrone</span>
-                <a href="Cifra/Louvores/Não Conseguirei Sozinho - Samuel Tayrone.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="avulsos" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎶 Não Te Troco - Rafael Bitencourt</span>
-                <a href="Cifra/Louvores/Não Te Troco - Rafael Bitencourt.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="avulsos" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎶 O Altar Sou Eu - Carol Braga e Felipe Rodrigues</span>
-                <a href="Cifra/Louvores/O Altar Sou Eu - Carol Braga e Felipe Rodrigues.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="avulsos" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎶 O Amor Me Amou - Amanda Loyola e Marcelo Markes</span>
-                <a href="Cifra/Louvores/O Amor Me Amou - Amanda Loyola e Marcelo Markes.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="avulsos" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎶 O Autor Sou Eu - Carol Braga & Felipe Rodrigues</span>
-                <a href="Cifra/Louvores/O Autor Sou Eu - Carol Braga & Felipe Rodrigues.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="avulsos" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎶 O Gigante Vai Cai - Mara Lima</span>
-                <a href="Cifra/Louvores/O Gigante Vai Cai - Mara Lima.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="avulsos" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎶 O Nome De Jesus - Vanilda Bordieri</span>
-                <a href="Cifra/Louvores/O Nome De Jesus - Vanilda Bordieri.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="avulsos" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎶 Poderoso - Coral Voice Soul</span>
-                <a href="Cifra/Louvores/Poderoso - Coral Voice Soul.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="avulsos" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎶 Rei da Glória - King of Glory</span>
-                <a href="Cifra/Louvores/Rei da Glória - King of Glory.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="avulsos" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎶 Rei Do Meu Coração - Gaby Sampaio</span>
-                <a href="Cifra/Louvores/Rei Do Meu Coração - Gaby Sampaio.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="avulsos" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎶 Rompendo em Fé - Comunidade da Graça</span>
-                <a href="Cifra/Louvores/Rompendo em Fé - Comunidade da Graça.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="avulsos" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎶 Salmos 103 - Quarteto Alpha</span>
-                <a href="Cifra/Louvores/Salmos 103 - Quarteto Alpha.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-
-                        <li data-categoria="avulsos" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎶 Santifica-Me - Coral Resgate</span>
-                <a href="Cifra/Louvores/Santifica-Me - Coral Resgate.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="avulsos" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎶 Soldado Ferido - Júnior</span>
-                <a href="Cifra/Louvores/Soldado Ferido - Júnior.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="avulsos" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎶 Tu És Santo - Jaqueline Pires</span>
-                <a href="Cifra/Louvores/Tu És Santo - Jaqueline Pires.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="avulsos" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎶 Tudo Entregarei - Giselli Cristina</span>
-                <a href="Cifra/Louvores/Tudo Entregarei - Giselli Cristina.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="avulsos" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎶 Vem Senhor - Stella Laura</span>
-                <a href="Cifra/Louvores/Vem Senhor - Stella Laura.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-            <li data-categoria="avulsos" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid #e2e8f0;">
-                <span>🎶 Yahweh Se Manifestará</span>
-                <a href="Cifra/Louvores/YAHWEH SE MANIFESTARÁ-cifra.pdf" target="_blank" style="background-color: #d97706; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">Abrir PDF</a>
-            </li>
-
-
-        </ul>
+        <!-- Preenchido automaticamente pelo script.js usando o dados.js -->
+        <ul id="listaCifras" class="lista-arquivos"></ul>
+      </div>
     </div>
-</div>
-
-
-
 
     <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
     <button
@@ -817,223 +273,8 @@
       💬
     </button>
 
-    <!-- JANELA DE CIFRAS (MODAL) -->
-    <div
-      id="modalCifras"
-      class="modal"
-      style="
-        display: none;
-        position: fixed;
-        z-index: 9999;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(15, 23, 42, 0.8);
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-      "
-    >
-      <div
-        class="modal-content"
-        style="
-          background-color: #ffffff;
-          padding: 35px 30px;
-          border-radius: 12px;
-          width: 100%;
-          max-width: 550px;
-          position: relative;
-          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        "
-      >
-        <span
-          class="close-modal"
-          onclick="fecharModalCifras()"
-          style="
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            font-size: 2rem;
-            font-weight: bold;
-            color: #64748b;
-            cursor: pointer;
-          "
-          >&times;</span
-        >
-        <h2>🎸 Cifras Disponíveis</h2>
-        <p>Clique no hino desejado para abrir o PDF:</p>
-
-        <ul class="lista-partituras">
-          <li>
-            <span>🎵 Harpa Cristã - Hino 010</span>
-            <a
-              href="Cifra/Harpa Cristã/010.pdf"
-              target="_blank"
-              class="btn-download"
-              >Abrir PDF</a
-            >
-          </li>
-          <!-- Copie e cole mais <li> aqui conforme adicionar novos hinos -->
-        </ul>
-      </div>
-    </div>
-
-       <script>
-     function abrirWhatsApp(mensagem) {
-  const textoCodificado = encodeURIComponent(mensagem);
-
-  // Troque 5511951599886 direto pelo seu número abaixo:
-  const url = "https://wa.me/5511951599886?" + textoCodificado;
-
-  window.open(url, "_blank", "noopener,noreferrer");
-}
-
-
-
-
-
-
-
-
-
-        function mostrarPrivacidade(event) {
-            event.preventDefault();
-            alert("Política de Privacidade - Dam Musical: Respeitamos a sua privacidade. Este site redireciona diretamente para o WhatsApp sem coletar dados.");
-        }
-
-                let formatoAtualPartitura = "todas";
-
-        function abrirModalPartituras() {
-            document.getElementById("modalPartituras").style.display = "flex";
-            const input = document.getElementById("campoBuscaPartitura");
-            if (input) input.value = "";
-            mudarFormatoPartitura("todas");
-        }
-
-        function fecharModalPartituras() {
-            document.getElementById("modalPartituras").style.display = "none";
-        }
-
-        function mudarFormatoPartitura(formato) {
-            formatoAtualPartitura = formato;
-
-            const botoes = {
-                todas: document.getElementById("btnFmtTodas"),
-                encore: document.getElementById("btnFmtEncore"),
-                musescore: document.getElementById("btnFmtMusescore")
-            };
-
-            for (let chave in botoes) {
-                if (chave === formato) {
-                    botoes[chave].style.backgroundColor = "#0f172a";
-                    botoes[chave].style.color = "#ffffff";
-                    botoes[chave].style.border = "none";
-                } else {
-                    botoes[chave].style.backgroundColor = "#f8fafc";
-                    botoes[chave].style.color = "#334155";
-                    botoes[chave].style.border = "1px solid #cbd5e1";
-                }
-            }
-
-            filtrarPartituras();
-        }
-
-        function filtrarPartituras() {
-            const termo = document.getElementById("campoBuscaPartitura").value
-                .toLowerCase()
-                .normalize("NFD")
-                .replace(/[\u0300-\u036f]/g, "");
-
-            const itens = document.querySelectorAll("#listaPartituras li");
-
-            itens.forEach(function(item) {
-                const fmtItem = item.getAttribute("data-formato");
-                const textoMusica = item.querySelector("span").textContent
-                    .toLowerCase()
-                    .normalize("NFD")
-                    .replace(/[\u0300-\u036f]/g, "");
-
-                const bateFormato = (formatoAtualPartitura === "todas" || fmtItem === formatoAtualPartitura);
-                const bateTexto = textoMusica.includes(termo);
-
-                if (bateFormato && bateTexto) {
-                    item.style.display = "flex";
-                } else {
-                    item.style.display = "none";
-                }
-            });
-        }
-
-
-               let categoriaAtualCifra = "todas";
-
-        function abrirModalCifras() {
-            document.getElementById("modalCifras").style.display = "flex";
-            const input = document.getElementById("campoBuscaCifra");
-            if (input) input.value = "";
-            mudarCategoriaCifra("todas");
-        }
-
-        function fecharModalCifras() {
-            document.getElementById("modalCifras").style.display = "none";
-        }
-
-        function mudarCategoriaCifra(categoria) {
-            categoriaAtualCifra = categoria;
-
-            // Atualiza a cor dos botões das abas
-            const botoes = {
-                todas: document.getElementById("btnCatTodas"),
-                harpa: document.getElementById("btnCatHarpa"),
-                avulsos: document.getElementById("btnCatAvulsos")
-            };
-
-            for (let chave in botoes) {
-                if (chave === categoria) {
-                    botoes[chave].style.backgroundColor = "#0f172a";
-                    botoes[chave].style.color = "#ffffff";
-                    botoes[chave].style.border = "none";
-                } else {
-                    botoes[chave].style.backgroundColor = "#f8fafc";
-                    botoes[chave].style.color = "#334155";
-                    botoes[chave].style.border = "1px solid #cbd5e1";
-                }
-            }
-
-            filtrarCifras();
-        }
-
-        function filtrarCifras() {
-            const termo = document.getElementById("campoBuscaCifra").value
-                .toLowerCase()
-                .normalize("NFD")
-                .replace(/[\u0300-\u036f]/g, "");
-
-            const itens = document.querySelectorAll("#listaCifras li");
-
-            itens.forEach(function(item) {
-                const catItem = item.getAttribute("data-categoria");
-                const textoHino = item.querySelector("span").textContent
-                    .toLowerCase()
-                    .normalize("NFD")
-                    .replace(/[\u0300-\u036f]/g, "");
-
-                const bateCategoria = (categoriaAtualCifra === "todas" || catItem === categoriaAtualCifra);
-                const bateTexto = textoHino.includes(termo);
-
-                if (bateCategoria && bateTexto) {
-                    item.style.display = "flex";
-                } else {
-                    item.style.display = "none";
-                }
-            });
-        }
-
-
-    </script>
-</body>
-</html>
-
+    <!-- SCRIPTS DE DADOS E FUNCIONALIDADES -->
+    <script src="dados.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
